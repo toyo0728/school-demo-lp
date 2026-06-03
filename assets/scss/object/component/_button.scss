@@ -1,0 +1,131 @@
+@use "../../global" as v;
+
+.c-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: 2px solid v.$main-color;
+  background-color: v.$main-color;
+  color: v.$white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0.48px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &::before {
+    width: 18px;
+    height: 13px;
+    background: url("../img/contact/contact-icon.svg") no-repeat center / contain;
+  }
+
+  &::after {
+    width: 18px;
+    height: 18px;
+    background: url("../img/contact/contact-arrow.svg") no-repeat center / contain;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid v.$main-color;
+      background-color: v.$white;
+      color: v.$main-color;
+    }
+
+    &:hover::before {
+      background: url("../img/contact/contact-icon-blue.svg") no-repeat center / contain;
+    }
+
+    &:hover::after {
+      background: url("../img/contact/contact-arrow-blue.svg") no-repeat center / contain;
+    }
+  }
+}
+
+.c-contact--large {
+  width: clamp(306px, 24.44vw, 500px);
+  padding: 20px 32px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  gap: 16px;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    max-width: 319px;
+    padding: 20px;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    gap: 12px;
+  }
+
+  @media (max-width: 374px) {
+    max-width: 268px;
+  }
+}
+
+.c-contact--large::before {
+  width: 24px;
+  height: 18px;
+}
+
+.c-contact--large::after {
+  width: 22px;
+  height: 22px;
+}
+
+.c-fixed-contact {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .c-fixed-contact {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 1000;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: v.$main-color;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: 0.3s;
+  }
+
+  .c-fixed-contact__icon {
+    margin-block-end: 4px;
+  }
+
+  .c-fixed-contact__icon img {
+    width: 15px;
+    height: auto;
+    display: block;
+  }
+
+  .c-fixed-contact__text {
+    font-size: 10px;
+  }
+
+  .c-fixed-contact.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

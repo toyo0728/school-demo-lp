@@ -1,0 +1,13 @@
+@use "../global" as v;
+
+.l-main {
+  padding-block-start: 56px;
+}
+
+.l-section {
+  padding-block: 120px;
+
+  @media (max-width: 767px) {
+    padding-block: 80px;
+  }
+}

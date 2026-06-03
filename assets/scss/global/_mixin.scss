@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "./variables" as v;
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == sp {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tab {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if $breakpoint == pc {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
