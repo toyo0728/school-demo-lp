@@ -34,6 +34,87 @@
   </head>
 
   <body id="top">
+    <header class="l-header p-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__title">
+          <a href="#top" class="l-header__logo">
+            <img
+              src="./assets/img/common/title-logo.webp"
+              class="p-header__logo"
+              width="225"
+              height="36"
+              alt="わかば個別指導塾"
+              loading="lazy"
+            />
+          </a>
+        </h1>
+        <nav class="l-header__nav" aria-label="Main Navigation">
+          <ul class="p-header__list">
+            <li><a href="#mission">指導方針</a></li>
+            <li><a href="#reason">選ばれる理由</a></li>
+            <li><a href="#teacher">講師紹介</a></li>
+            <li><a href="#course">コース案内</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+
+          <div class="l-header__tel p-header-tel c-tel">
+            <a href="tel:0120123456" class="p-header-tel__number">
+              <img
+                src="./assets/img/common/tel-icon.svg"
+                width="22"
+                height="27"
+                alt="電話アイコン"
+                loading="lazy"
+              />
+              0120-12-3456
+            </a>
+            <p class="p-header-tel__text">受付時間：平日 9:00〜19:00</p>
+          </div>
+
+          <a href="#contact" class="p-header__contact c-contact">お問い合わせ</a>
+        </nav>
+
+        <button class="p-header__icon js-drawer-toggle" type="button" aria-label="メニューを開く">
+          <span class="p-header__icon-bar-wrap">
+            <span class="p-header__icon-bar1"></span>
+            <span class="p-header__icon-bar2"></span>
+            <span class="p-header__icon-bar3"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="p-header-drawer js-drawer" aria-hidden="true">
+        <div class="p-header-drawer__inner">
+          <nav class="p-header-drawer__nav" aria-label="スマートフォン用ナビゲーション">
+            <ul class="p-header-drawer__list">
+              <li><a href="#mission">指導方針</a></li>
+              <li><a href="#reason">選ばれる理由</a></li>
+              <li><a href="#teacher">講師紹介</a></li>
+              <li><a href="#course">コース案内</a></li>
+              <li><a href="#faq">よくある質問</a></li>
+            </ul>
+          </nav>
+
+          <div class="p-header-drawer__tel c-tel">
+            <a href="tel:0120123456" class="p-header-drawer__tel-number">
+              <img
+                src="./assets/img/common/tel-icon.svg"
+                width="31"
+                height="41"
+                alt="電話番号"
+                loading="lazy"
+              />
+              0120-12-3456
+            </a>
+            <p class="p-header-drawer__tel-text">受付時間：平日 9:00〜19:00</p>
+          </div>
+
+          <div class="p-header-drawer__contact">
+            <a href="#contact" class="c-contact">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main class="l-main">
     </main>
