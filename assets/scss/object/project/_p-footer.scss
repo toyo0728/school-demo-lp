@@ -1,0 +1,130 @@
+@use "../../global" as v;
+
+.p-footer {
+  background: v.$light-blue;
+}
+
+.p-footer__inner {
+  padding-block: 60px;
+  padding-inline: 20px;
+  margin: 0 auto;
+}
+
+.p-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include mq(mid) {
+    align-items: start;
+    max-width: 1040px;
+  }
+}
+
+.p-footer__top {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  @include mq(mid) {
+    // width: 1040px;
+
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__logo {
+  width: 225px;
+  height: 36px;
+}
+
+.p-footer__body {
+  margin-block-start: 43px;
+
+  @include mq(mid) {
+    margin-block-start: 20px;
+  }
+}
+
+.p-footer__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 38.5px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  text-align: center;
+
+  @include mq(mid) {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+
+  li a {
+    position: relative;
+
+    &:hover {
+      transition: 0.3s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%; // テキスト幅に追従
+        height: 1px;
+        left: 50%;
+        bottom: -7px;
+        background: $color-text;
+        transform: translateX(-50%); // ← 中央に配置するポイント
+      }
+    }
+  }
+}
+
+.p-footer__bottom {
+  margin-block-start: 32px;
+  padding-top: 30px;
+  align-self: stretch;
+  border-top: 2px solid $color-text;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include mq(mid) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__sns {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-footer__sns-link {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.p-footer__sns-icon {
+}
+
+.p-footer__copy {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
