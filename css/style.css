@@ -1249,7 +1249,6 @@ summary::-webkit-details-marker {
   height: 16px;
   text-align: center;
   background: #66b1c5;
-  transition: transform 0.3s ease;
 }
 @media (max-width: 767px) {
   .faq__question::before {
@@ -1259,8 +1258,9 @@ summary::-webkit-details-marker {
   }
 }
 
-.js-details.is-opened .faq__question::before {
+.js-details[open] .faq__question::before {
   transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.4s ease;
 }
 
 details[open] .faq__question::after {
@@ -1395,6 +1395,4 @@ details[open] .faq__question::after {
 
 .u-text-center {
   text-align: center;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,166 +1,238 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾</title>
-    <meta
-      name="description"
-      content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？"
-    />
-    <meta name="robots" content="noindex, nofollow" />
-    <!-- favicon -->
-    <link rel="icon" href="./assets/favicon/favicon.png" />
-    <!-- OGP -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾" />
-    <meta
-      property="og:description"
-      content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？"
-    />
-    <meta property="og:url" content="https://toyo-demo.site/" />
-    <meta property="og:site_name" content="わかば個別指導塾" />
-    <meta property="og:image" content="https://toyo-demo.site/assets/img/common/ogp.png" />
-    <meta property="og:locale" content="ja_JP" />
 
-    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=1.4.2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Shippori+Mincho:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾</title>
+  <meta name="description"
+    content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- favicon -->
+  <link rel="icon" href="./assets/favicon/favicon.png" />
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾" />
+  <meta property="og:description"
+    content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？" />
+  <meta property="og:url" content="https://toyo-demo.site/" />
+  <meta property="og:site_name" content="わかば個別指導塾" />
+  <meta property="og:image" content="https://toyo-demo.site/assets/img/common/ogp.png" />
+  <meta property="og:locale" content="ja_JP" />
 
-  <body id="top">
-    <header class="l-header p-header">
-      <div class="l-header__inner">
-        <h1 class="l-header__title">
-          <a href="#top" class="l-header__logo">
-            <img
-              src="./assets/img/common/title-logo.webp"
-              class="p-header__logo"
-              width="225"
-              height="36"
-              alt="わかば個別指導塾"
-              loading="lazy"
-            />
+  <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.4.2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Shippori+Mincho:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- GSAP CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body id="top">
+  <header class="l-header p-header">
+    <div class="l-header__inner">
+      <h1 class="l-header__title">
+        <a href="#top" class="l-header__logo">
+          <img src="./assets/img/common/title-logo.webp" class="p-header__logo" width="225" height="36" alt="わかば個別指導塾"
+            loading="lazy" />
+        </a>
+      </h1>
+      <nav class="l-header__nav" aria-label="Main Navigation">
+        <ul class="p-header__list">
+          <li><a href="#mission">指導方針</a></li>
+          <li><a href="#reason">選ばれる理由</a></li>
+          <li><a href="#teacher">講師紹介</a></li>
+          <li><a href="#course">コース案内</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+
+        <div class="l-header__tel p-header-tel c-tel">
+          <a href="tel:0120123456" class="p-header-tel__number">
+            <img src="./assets/img/common/tel-icon.svg" width="22" height="27" alt="電話アイコン" loading="lazy" />
+            0120-12-3456
           </a>
-        </h1>
-        <nav class="l-header__nav" aria-label="Main Navigation">
-          <ul class="p-header__list">
+          <p class="p-header-tel__text">受付時間：平日 9:00〜19:00</p>
+        </div>
+
+        <a href="#contact" class="p-header__contact c-contact">お問い合わせ</a>
+      </nav>
+
+      <button class="p-header__icon js-drawer-toggle" type="button" aria-label="メニューを開く">
+        <span class="p-header__icon-bar-wrap">
+          <span class="p-header__icon-bar1"></span>
+          <span class="p-header__icon-bar2"></span>
+          <span class="p-header__icon-bar3"></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="p-header-drawer js-drawer" aria-hidden="true">
+      <div class="p-header-drawer__inner">
+        <nav class="p-header-drawer__nav" aria-label="スマートフォン用ナビゲーション">
+          <ul class="p-header-drawer__list">
             <li><a href="#mission">指導方針</a></li>
             <li><a href="#reason">選ばれる理由</a></li>
             <li><a href="#teacher">講師紹介</a></li>
             <li><a href="#course">コース案内</a></li>
             <li><a href="#faq">よくある質問</a></li>
           </ul>
-
-          <div class="l-header__tel p-header-tel c-tel">
-            <a href="tel:0120123456" class="p-header-tel__number">
-              <img
-                src="./assets/img/common/tel-icon.svg"
-                width="22"
-                height="27"
-                alt="電話アイコン"
-                loading="lazy"
-              />
-              0120-12-3456
-            </a>
-            <p class="p-header-tel__text">受付時間：平日 9:00〜19:00</p>
-          </div>
-
-          <a href="#contact" class="p-header__contact c-contact">お問い合わせ</a>
         </nav>
 
-        <button class="p-header__icon js-drawer-toggle" type="button" aria-label="メニューを開く">
-          <span class="p-header__icon-bar-wrap">
-            <span class="p-header__icon-bar1"></span>
-            <span class="p-header__icon-bar2"></span>
-            <span class="p-header__icon-bar3"></span>
-          </span>
-        </button>
-      </div>
+        <div class="p-header-drawer__tel c-tel">
+          <a href="tel:0120123456" class="p-header-drawer__tel-number">
+            <img src="./assets/img/common/tel-icon.svg" width="31" height="41" alt="電話番号" loading="lazy" />
+            0120-12-3456
+          </a>
+          <p class="p-header-drawer__tel-text">受付時間：平日 9:00〜19:00</p>
+        </div>
 
-      <div class="p-header-drawer js-drawer" aria-hidden="true">
-        <div class="p-header-drawer__inner">
-          <nav class="p-header-drawer__nav" aria-label="スマートフォン用ナビゲーション">
-            <ul class="p-header-drawer__list">
-              <li><a href="#mission">指導方針</a></li>
-              <li><a href="#reason">選ばれる理由</a></li>
-              <li><a href="#teacher">講師紹介</a></li>
-              <li><a href="#course">コース案内</a></li>
-              <li><a href="#faq">よくある質問</a></li>
-            </ul>
-          </nav>
-
-          <div class="p-header-drawer__tel c-tel">
-            <a href="tel:0120123456" class="p-header-drawer__tel-number">
-              <img
-                src="./assets/img/common/tel-icon.svg"
-                width="31"
-                height="41"
-                alt="電話番号"
-                loading="lazy"
-              />
-              0120-12-3456
-            </a>
-            <p class="p-header-drawer__tel-text">受付時間：平日 9:00〜19:00</p>
-          </div>
-
-          <div class="p-header-drawer__contact">
-            <a href="#contact" class="c-contact">お問い合わせ</a>
-          </div>
+        <div class="p-header-drawer__contact">
+          <a href="#contact" class="c-contact">お問い合わせ</a>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="l-main">
-      <section class="l-mv p-mv" id="fv">
-        <div class="l-mv__inner">
-          <div class="l-mv-titleWrap">
-            <h2 class="p-mv__title">
-              <span class="p-mv__title--yellow">自信</span>がつく、<br />
-              勉強が<span class="p-mv__title--yellow">好き</span>になる
-            </h2>
-            <p class="p-mv__subTitle">一人ひとりに寄り添う個別指導塾</p>
-          </div>
-          <div class="l-mv-contactWrap">
-            <p class="p-mv__text">\ 今なら入会金無料！/</p>
-            <a href="#contact" class="c-contact c-contact--large p-mv__contact">
-              <span class="p-mv__contact-text">お問い合わせはこちら</span>
-              <span class="p-mv__shine" aria-hidden="true"></span>
-            </a>
-          </div>
+  <main class="l-main">
+    <section class="l-mv p-mv" id="fv">
+      <div class="l-mv__inner">
+        <div class="l-mv-titleWrap">
+          <h2 class="p-mv__title">
+            <span class="p-mv__title--yellow">自信</span>がつく、<br />
+            勉強が<span class="p-mv__title--yellow">好き</span>になる
+          </h2>
+          <p class="p-mv__subTitle">一人ひとりに寄り添う個別指導塾</p>
         </div>
-        <div class="l-mv-swiper-container">
-          <div class="swiper p-mv-swiper">
-            <div class="swiper-wrapper p-mv-swiper-wrapper">
-              <div class="swiper-slide p-mv-swiper-slide">
-                <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-1.webp" width="1000" height="650" alt="MV画像1" />
-                </div>
+        <div class="l-mv-contactWrap">
+          <p class="p-mv__text">\ 今なら入会金無料！/</p>
+          <a href="#contact" class="c-contact c-contact--large p-mv__contact">
+            <span class="p-mv__contact-text">お問い合わせはこちら</span>
+            <span class="p-mv__shine" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div class="l-mv-swiper-container">
+        <div class="swiper p-mv-swiper">
+          <div class="swiper-wrapper p-mv-swiper-wrapper">
+            <div class="swiper-slide p-mv-swiper-slide">
+              <div class="p-mv__image">
+                <img src="./assets/img/fv/fv-1.webp" width="1000" height="650" alt="MV画像1" />
               </div>
-              <div class="swiper-slide p-mv-swiper-slide">
-                <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-2.webp" width="1000" height="650" alt="MV画像2" />
-                </div>
+            </div>
+            <div class="swiper-slide p-mv-swiper-slide">
+              <div class="p-mv__image">
+                <img src="./assets/img/fv/fv-2.webp" width="1000" height="650" alt="MV画像2" />
               </div>
-              <div class="swiper-slide p-mv-swiper-slide">
-                <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-3.webp" width="1000" height="650" alt="MV画像3" />
-                </div>
+            </div>
+            <div class="swiper-slide p-mv-swiper-slide">
+              <div class="p-mv__image">
+                <img src="./assets/img/fv/fv-3.webp" width="1000" height="650" alt="MV画像3" />
               </div>
             </div>
           </div>
-          <div class="swiper-pagination p-mv-swiper-pagination"></div>
         </div>
-      </section>
-    </main>
+        <div class="swiper-pagination p-mv-swiper-pagination"></div>
+      </div>
+    </section>
 
-    <script src="./assets/js/lib/swiper-bundle.min.js?v=1.4.2" defer></script>
-    <script src="./assets/js/hamburger.js?v=1.5.0" defer></script>
-    <script src="./assets/js/main.js?v=1.5.0" defer></script>
-  </body>
+    <!-- よくある質問 -->
+    <section id="faq" class="faq">
+      <div class="faq__inner --narrow">
+        <h3 class="faq__title --faq">よくある質問</h3>
+        <!-- アコーディオンの実装 -->
+        <div class="faq__items">
+          <details class="faq__item js-details">
+            <summary class="js-summary">
+              <div class="faq__question">
+                <p class="faq__question-text">
+                  授業はどのような形式で進められますか？
+                </p>
+              </div>
+            </summary>
+            <div class="js-content">
+              <div class="faq__answer">
+                <p class="faq__answer-text">
+                  授業は1対1または少人数制で、生徒一人ひとりに合わせた個別指導を行います。生徒が理解できるまで丁寧にサポートし、苦手克服から得意分野の伸長までしっかり対応します。また、各学校の授業進度に合わせた学習を心がけています。
+                </p>
+              </div>
+            </div>
+          </details>
+          <details class="faq__item js-details">
+            <summary class="js-summary">
+              <div class="faq__question">
+                <p class="faq__question-text">
+                  勉強が苦手な子でもついていけますか？
+                </p>
+              </div>
+            </summary>
+            <div class="js-content">
+              <div class="faq__answer">
+                <p class="faq__answer-text">
+                  もちろん大丈夫です！勉強に苦手意識を持つお子さま一人ひとりに寄り添い、小さな達成感を積み重ねて学ぶ楽しさを実感できるようサポートします。「まずはわかる喜びを感じてもらうこと」を大切に指導しています。
+                </p>
+              </div>
+            </div>
+          </details>
+          <details class="faq__item js-details">
+            <summary class="js-summary">
+              <div class="faq__question">
+                <p class="faq__question-text">
+                  コースの変更などはできますか？
+                </p>
+              </div>
+            </summary>
+            <div class="js-content">
+              <div class="faq__answer">
+                <p class="faq__answer-text">
+                  はい。月単位でコースの変更は可能です。
+                </p>
+              </div>
+            </div>
+          </details>
+          <details class="faq__item js-details">
+            <summary class="js-summary">
+              <div class="faq__question">
+                <p class="faq__question-text">
+                  授業以外に何かサポートはありますか？
+                </p>
+              </div>
+            </summary>
+            <div class="js-content">
+              <div class="faq__answer">
+                <p class="faq__answer-text">
+                  授業の振り返りを行う「学習カウンセリング」や「進路相談」、日々の勉強習慣をサポートする「自習スペース」も提供しています。また、定期的な保護者面談を通じて、お子さまの成長を一緒に見守ります。
+                </p>
+              </div>
+            </div>
+          </details>
+          <details class="faq__item js-details">
+            <summary class="js-summary">
+              <div class="faq__question">
+                <p class="faq__question-text">
+                  塾の雰囲気に子供が慣れるか心配です。
+                </p>
+              </div>
+            </summary>
+            <div class=" js-content">
+              <div class="faq__answer">
+                <p class="faq__answer-text">
+                  無料体験学習を実施しておりますので、まずは教室にお越しいただき、ご確認後入塾していただくことができます。お気軽にご相談ください。
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/js/lib/swiper-bundle.min.js?v=1.4.2" defer></script>
+  <script src="./assets/js/hamburger.js?v=1.5.0" defer></script>
+  <script src="./assets/js/main.js?v=1.5.0" defer></script>
+</body>
+
 </html>
