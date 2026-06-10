@@ -80,3 +80,64 @@ if (mvSwiperEl && typeof Swiper !== 'undefined') {
     }
   });
 }
+
+
+// ====================
+//  パララックス
+// ====================
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+
+  gsap.utils.toArray('.js-parallax1').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -300,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+  gsap.utils.toArray('.js-parallax2').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -300,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+
+});
+
+mm.add("(max-width: 768px)", () => {
+
+  gsap.utils.toArray('.js-parallax1').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -150,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+  gsap.utils.toArray('.js-parallax2').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -150,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+
+});
