@@ -1,3 +1,196 @@
 @use "../../global" as v;
 
-// 講師紹介セクション
+.p-teacher {
+    background-color: v.$gray-bg;
+    overflow: hidden;
+}
+
+.p-teacher__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+// =============================
+// Swiper 構造
+// =============================
+.p-teacher-swiper-container,
+.p-teacher-swiper,
+.p-teacher-swiper-wrapper,
+.p-teacher-swiper-slide {
+    position: relative;
+}
+
+// .swiper部分
+.p-teacher-swiper {
+    overflow: visible;
+    clip-path: inset(0 -50vw 0 0);
+}
+
+.p-teacher-swiper-slide {
+    width: 352px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+// =============================
+// カード内要素
+// =============================
+.p-teacher__img-wrap {
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.p-teacher__textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.p-teacher__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.p-teacher__subjects {
+    display: flex;
+    gap: 8px;
+}
+
+.p-teacher__subject {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    padding-block: 3px;
+    background-color: v.$main-color;
+    color: v.$white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.56px;
+    line-height: normal;
+    border-radius: 3px;
+}
+
+.p-teacher__name {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.1px;
+    color: v.$text-main;
+}
+
+.p-teacher__body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.9px;
+    color: v.$text-main;
+}
+
+// =============================
+// 下部バー
+// =============================
+.p-teacher__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 74px;
+}
+
+.p-teacher__nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+// =============================
+// ナビゲーションボタン
+// =============================
+
+// 位置のリセット（コンテナ内スコープ）
+.p-teacher-swiper-container {
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        margin: 0;
+        padding: 0;
+        position: static;
+    }
+
+    // デフォルトのアイコンを初期化
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        content: "";
+    }
+
+    // 各ボタンのカスタマイズ
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background-color: v.$main-color;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+
+        &::after {
+            display: block;
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid v.$white;
+            border-top: 2px solid v.$white;
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+    }
+
+    .swiper-button-prev::after {
+        transform: rotate(-135deg) translate(1px, -1px);
+    }
+
+    .swiper-button-next::after {
+        transform: rotate(45deg) translate(-1px, 1px);
+    }
+
+    // =============================
+    // ページネーション (progressbar)
+    // =============================
+
+    // 位置の設定と外枠
+    .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 450px;
+        height: 8px;
+        background-color: rgba(180, 173, 173, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    // active な部分
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: v.$main-color;
+        border-radius: 10px 0 0 10px;
+    }
+}

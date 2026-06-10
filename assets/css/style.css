@@ -867,32 +867,24 @@ body.is-fixed {
 ========================= */
 .p-mv.is-show {
   /* 1. 画像 */
+  /* 2. タイトル */
+  /* 3. サブタイトル */
+  /* 4. テキスト */
+  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__image {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.9s ease, transform 1.2s ease;
 }
-.p-mv.is-show {
-  /* 2. タイトル */
-}
 .p-mv.is-show .p-mv__title {
   animation: mvTitleUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
-}
-.p-mv.is-show {
-  /* 3. サブタイトル */
 }
 .p-mv.is-show .p-mv__subTitle {
   animation: mvSubTitleReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
 }
-.p-mv.is-show {
-  /* 4. テキスト */
-}
 .p-mv.is-show .p-mv__text {
   animation: mvTextIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards, mvTextBounce 4s ease-in-out 4.2s infinite;
-}
-.p-mv.is-show {
-  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__contact {
   animation: mvContactIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.35s forwards;
@@ -1039,6 +1031,273 @@ body.is-fixed {
     transform: scale(1);
   }
 }
+.p-teacher {
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+.p-teacher__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.p-teacher-swiper-container,
+.p-teacher-swiper,
+.p-teacher-swiper-wrapper,
+.p-teacher-swiper-slide {
+  position: relative;
+}
+
+.p-teacher-swiper {
+  overflow: visible;
+  clip-path: inset(0 -50vw 0 0);
+}
+
+.p-teacher-swiper-slide {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.p-teacher__img-wrap {
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.p-teacher__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-teacher__textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.p-teacher__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-teacher__subjects {
+  display: flex;
+  gap: 8px;
+}
+
+.p-teacher__subject {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  padding-block: 3px;
+  background-color: #66b1c5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+  line-height: normal;
+  border-radius: 3px;
+}
+
+.p-teacher__name {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+  color: #274b66;
+}
+
+.p-teacher__body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.9px;
+  color: #274b66;
+}
+
+.p-teacher__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 74px;
+}
+
+.p-teacher__nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.p-teacher-swiper-container .swiper-button-prev,
+.p-teacher-swiper-container .swiper-button-next {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+.p-teacher-swiper-container .swiper-button-prev::after,
+.p-teacher-swiper-container .swiper-button-next::after {
+  content: "";
+}
+.p-teacher-swiper-container .swiper-button-prev,
+.p-teacher-swiper-container .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: #66b1c5;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.p-teacher-swiper-container .swiper-button-prev::after,
+.p-teacher-swiper-container .swiper-button-next::after {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+}
+.p-teacher-swiper-container .swiper-button-prev.swiper-button-disabled,
+.p-teacher-swiper-container .swiper-button-next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.p-teacher-swiper-container .swiper-button-prev::after {
+  transform: rotate(-135deg) translate(1px, -1px);
+}
+.p-teacher-swiper-container .swiper-button-next::after {
+  transform: rotate(45deg) translate(-1px, 1px);
+}
+.p-teacher-swiper-container .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  position: relative;
+  top: unset;
+  left: unset;
+  width: 450px;
+  height: 8px;
+  background-color: rgba(180, 173, 173, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.p-teacher-swiper-container .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #66b1c5;
+  border-radius: 10px 0 0 10px;
+}
+
+.p-reason {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/common/reason-bg.webp") no-repeat center/cover;
+}
+
+.p-reason__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.p-reason__title--wrap {
+  flex-direction: row;
+  position: sticky;
+  top: 95px;
+}
+
+.p-reason__title {
+  width: 245px;
+  flex-shrink: 0;
+}
+
+.p-reason__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  flex: 1;
+  max-width: 766px;
+}
+
+.p-reason__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 25px 32px;
+  min-height: 280px;
+}
+
+.p-reason__badge {
+  position: absolute;
+  top: -11px;
+  left: -21px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #66b1c5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.p-reason__badge-label {
+  font-size: 6px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.p-reason__badge-num {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.p-reason__textbox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #274b66;
+}
+
+.p-reason__heading {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+}
+
+.p-reason__body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+}
+
+.p-reason__img-wrap {
+  width: 306px;
+  height: 228px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.p-reason__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
   .hidden-pc {
     display: none;
