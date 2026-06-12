@@ -867,24 +867,32 @@ body.is-fixed {
 ========================= */
 .p-mv.is-show {
   /* 1. 画像 */
-  /* 2. タイトル */
-  /* 3. サブタイトル */
-  /* 4. テキスト */
-  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__image {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.9s ease, transform 1.2s ease;
 }
+.p-mv.is-show {
+  /* 2. タイトル */
+}
 .p-mv.is-show .p-mv__title {
   animation: mvTitleUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+.p-mv.is-show {
+  /* 3. サブタイトル */
 }
 .p-mv.is-show .p-mv__subTitle {
   animation: mvSubTitleReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
 }
+.p-mv.is-show {
+  /* 4. テキスト */
+}
 .p-mv.is-show .p-mv__text {
   animation: mvTextIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards, mvTextBounce 4s ease-in-out 4.2s infinite;
+}
+.p-mv.is-show {
+  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__contact {
   animation: mvContactIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.35s forwards;
@@ -1131,7 +1139,6 @@ body.is-fixed {
   gap: 12px;
 }
 
-<<<<<<< HEAD
 .p-course__content-title {
   font-size: 22px;
   font-weight: 700;
@@ -1322,7 +1329,56 @@ dialog.js-show::backdrop {
   .p-course-modal__close-button:hover {
     cursor: pointer;
   }
-=======
+}
+
+.p-teacher {
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+.p-teacher__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.p-teacher-swiper-container,
+.p-teacher-swiper,
+.p-teacher-swiper-wrapper,
+.p-teacher-swiper-slide {
+  position: relative;
+}
+
+.p-teacher-swiper {
+  overflow: visible;
+  clip-path: inset(0 -50vw 0 0);
+}
+
+.p-teacher-swiper-slide {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.p-teacher__img-wrap {
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.p-teacher__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-teacher__textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .p-teacher__meta {
   display: flex;
   flex-direction: column;
@@ -1540,7 +1596,6 @@ dialog.js-show::backdrop {
   width: 100%;
   height: 100%;
   object-fit: cover;
->>>>>>> origin/main
 }
 
 @media (min-width: 768px) {
