@@ -13,17 +13,26 @@
     <link rel="icon" href="./assets/favicon/favicon.png" />
     <!-- OGP -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾" />
+    <meta
+      property="og:title"
+      content="わかば個別指導塾｜自信がつく、勉強が好きになる個別指導塾"
+    />
     <meta
       property="og:description"
       content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？"
     />
     <meta property="og:url" content="https://toyo-demo.site/" />
     <meta property="og:site_name" content="わかば個別指導塾" />
-    <meta property="og:image" content="https://toyo-demo.site/assets/img/common/ogp.png" />
+    <meta
+      property="og:image"
+      content="https://toyo-demo.site/assets/img/common/ogp.png"
+    />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2"
+    />
     <link rel="stylesheet" href="./assets/css/style.css?v=1.4.2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,10 +80,16 @@
             <p class="p-header-tel__text">受付時間：平日 9:00〜19:00</p>
           </div>
 
-          <a href="#contact" class="p-header__contact c-contact">お問い合わせ</a>
+          <a href="#contact" class="p-header__contact c-contact"
+            >お問い合わせ</a
+          >
         </nav>
 
-        <button class="p-header__icon js-drawer-toggle" type="button" aria-label="メニューを開く">
+        <button
+          class="p-header__icon js-drawer-toggle"
+          type="button"
+          aria-label="メニューを開く"
+        >
           <span class="p-header__icon-bar-wrap">
             <span class="p-header__icon-bar1"></span>
             <span class="p-header__icon-bar2"></span>
@@ -85,7 +100,10 @@
 
       <div class="p-header-drawer js-drawer" aria-hidden="true">
         <div class="p-header-drawer__inner">
-          <nav class="p-header-drawer__nav" aria-label="スマートフォン用ナビゲーション">
+          <nav
+            class="p-header-drawer__nav"
+            aria-label="スマートフォン用ナビゲーション"
+          >
             <ul class="p-header-drawer__list">
               <li><a href="#mission">指導方針</a></li>
               <li><a href="#reason">選ばれる理由</a></li>
@@ -139,17 +157,32 @@
             <div class="swiper-wrapper p-mv-swiper-wrapper">
               <div class="swiper-slide p-mv-swiper-slide">
                 <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-1.webp" width="1000" height="650" alt="MV画像1" />
+                  <img
+                    src="./assets/img/fv/fv-1.webp"
+                    width="1000"
+                    height="650"
+                    alt="MV画像1"
+                  />
                 </div>
               </div>
               <div class="swiper-slide p-mv-swiper-slide">
                 <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-2.webp" width="1000" height="650" alt="MV画像2" />
+                  <img
+                    src="./assets/img/fv/fv-2.webp"
+                    width="1000"
+                    height="650"
+                    alt="MV画像2"
+                  />
                 </div>
               </div>
               <div class="swiper-slide p-mv-swiper-slide">
                 <div class="p-mv__image">
-                  <img src="./assets/img/fv/fv-3.webp" width="1000" height="650" alt="MV画像3" />
+                  <img
+                    src="./assets/img/fv/fv-3.webp"
+                    width="1000"
+                    height="650"
+                    alt="MV画像3"
+                  />
                 </div>
               </div>
             </div>
@@ -168,7 +201,240 @@
 
       <section id="faq" class="p-faq"></section>
 
-      <section id="contact" class="p-contact"></section>
+      <section id="contact" class="p-contact">
+        <div class="l-inner p-contact__inner">
+          <div class="p-contact__container">
+            <div class="p-contact__head--top">
+              <h2 class="c-section-title__wrap p-contact-title__wrap">
+                <span class="c-section-title__en p-contact-title__en">CONTACT</span>
+                <span class="c-section-title__ja p-contact-title__ja">お問い合わせ</span>
+              </h2>
+            </div>
+            <form class="p-contact__form" id="contact-form">
+              <div class="p-contact__row">
+                <p class="p-contact__head">
+                  生徒さまのお名前<span class="--must">*</span>
+                </p>
+                <div class="p-contact__data">
+                  <div class="p-contact__name-wrap">
+                    <input type="text" placeholder="姓" id="inName1" />
+                    <input type="text" placeholder="名" id="inName2" />
+                  </div>
+                  <p class="p-contact__error-message" id="emName"></p>
+                </div>
+              </div>
+              <div class="p-contact__row">
+                <p class="p-contact__head">
+                  メールアドレス<span class="--must">*</span>
+                </p>
+                <div class="p-contact__data">
+                  <input
+                    type="email"
+                    placeholder="xxx@example.com"
+                    id="inEmail"
+                  />
+                  <p class="p-contact__error-message" id="emEmail"></p>
+                </div>
+              </div>
+              <div class="p-contact__row">
+                <p class="p-contact__head">ご連絡の取れる電話番号</p>
+                <div class="p-contact__data">
+                  <input
+                    type="tel"
+                    placeholder="03-1234-5678"
+                    id="inTel"
+                    inputmode="tel"
+                    pattern="[0-9\-]*"
+                  />
+                  <!-- <p class="p-contact__error-message" id="emTel"></p> -->
+                </div>
+              </div>
+              <div class="p-contact__row-group">
+                <div class="p-contact__row">
+                  <p class="p-contact__head">
+                    郵便番号<span class="--must">*</span>
+                  </p>
+                  <div class="p-contact__data">
+                    <input
+                      type="text"
+                      placeholder="0000000"
+                      id="inZip"
+                      inputmode="numeric"
+                      pattern="[0-9\-]*"
+                      maxlength="8"
+                    />
+                    <p class="p-contact__error-message" id="emZip"></p>
+                  </div>
+                </div>
+                <div class="p-contact__row">
+                  <p class="p-contact__head">都道府県</p>
+                  <div class="p-contact__data">
+                    <div class="p-contact__select-wrap">
+                      <svg
+                        width="12"
+                        height="8"
+                        viewBox="0 0 12 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 0L5.707 4.293L1.414 0L0 1.414L5.707 7.121L11.414 1.414L10 0Z"
+                          fill="#274B66"
+                        />
+                      </svg>
+
+                      <select name="occupation" id="inSelect">
+                        <option disabled selected>選択してください</option>
+                        <!-- <option value="選択肢1">選択肢1</option>
+                      <option value="選択肢2">選択肢2</option>
+                      <option value="選択肢3">選択肢3</option>
+                      <option value="選択肢4">選択肢4</option> -->
+                      </select>
+                    </div>
+                    <p class="p-contact__error-message" id="emSelect"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-contact__row">
+                <p class="p-contact__head">住所</p>
+                <div class="p-contact__data">
+                  <input
+                    type="text"
+                    placeholder="千代田区〇〇1-1-1"
+                    id="inAddress"
+                  />
+
+                  <p class="p-contact__error-message" id="emAddress"></p>
+                </div>
+              </div>
+              <div class="p-contact__row">
+                <p class="p-contact__head">ご希望の校舎</p>
+                <div class="p-contact__data">
+                  <div class="p-contact__select-wrap">
+                    <svg
+                      width="12"
+                      height="8"
+                      viewBox="0 0 12 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0L5.707 4.293L1.414 0L0 1.414L5.707 7.121L11.414 1.414L10 0Z"
+                        fill="#274B66"
+                      />
+                    </svg>
+
+                    <select name="school">
+                      <option value="" disabled selected>
+                        選択してください
+                      </option>
+                      <!-- <option value="千代田校">千代田校</option>
+                      <option value="新宿校">新宿校</option>
+                      <option value="渋谷校">渋谷校</option>
+                      <option value="横浜校">横浜校</option> -->
+                    </select>
+                  </div>
+
+                  <p class="p-contact__error-message" id="emSchool"></p>
+                </div>
+              </div>
+              <div class="p-contact__row --aifs">
+                <p class="p-contact__head">
+                  ご用件<span class="--must">*</span>
+                </p>
+                <div class="p-contact__data">
+                  <div id="inKind" class="p-contact__data-checkbox">
+                    <label for="checkbox1">
+                      <input
+                        type="checkbox"
+                        id="checkbox1"
+                        name="kind"
+                        value="資料請求"
+                      />
+                      <span>資料請求</span>
+                    </label>
+                    <label for="checkbox2">
+                      <input
+                        type="checkbox"
+                        id="checkbox2"
+                        name="kind"
+                        value="無料体験お申し込み"
+                      />
+                      <span>無料体験お申し込み</span>
+                    </label>
+                    <label for="checkbox3">
+                      <input
+                        type="checkbox"
+                        id="checkbox3"
+                        name="kind"
+                        value="コースお申し込み"
+                      />
+                      <span>コースお申し込み</span>
+                    </label>
+                    <label for="checkbox4">
+                      <input
+                        type="checkbox"
+                        id="checkbox4"
+                        name="kind"
+                        value="その他"
+                      />
+                      <span>その他</span>
+                    </label>
+                  </div>
+                  <p class="p-contact__error-message" id="emKind"></p>
+                </div>
+              </div>
+              <div class="p-contact__row --aifs">
+                <p class="p-contact__head">お問い合わせ内容</p>
+                <div class="p-contact__data">
+                  <textarea
+                    name="message"
+                    id="inTextarea"
+                    placeholder="ご自由にご記入ください。"
+                  ></textarea>
+                  <p class="p-contact__error-message" id="emTextarea"></p>
+                </div>
+              </div>
+              <div class="p-contact__acceptance p-contact__data-checkbox">
+                <label for="inPrivacy">
+                  <input
+                    type="checkbox"
+                    id="inPrivacy"
+                    name="privacy"
+                    value="acceptance"
+                  />
+                  <span><a href="">利用規約に同意します</a></span>
+                </label>
+                <p class="p-contact__error-message" id="emPrivacy"></p>
+              </div>
+              <div class="p-contact__submit">
+                <button
+                  type="submit"
+                  class="c-btn c-btn--submit p-contact__btn-submit"
+                  id="submitBtn"
+                >
+                  入力内容を送信する
+                  <svg
+                    class="p-contact-btn__icon-arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle class="icon-bg" cx="9" cy="9" r="9" fill="white" />
+                    <path
+                      class="icon-shape"
+                      d="M12 9L7.5 11.5981L7.5 6.40192L12 9Z"
+                      fill="#66B1C5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="p-footer"></footer>
