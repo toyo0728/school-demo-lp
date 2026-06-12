@@ -13,28 +13,18 @@
 .p-footer__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin: 0 auto;
-
-  @include mq(mid) {
-    align-items: start;
-    max-width: 1040px;
-  }
+  align-items: start;
+  max-width: 1040px;
 }
 
 .p-footer__top {
   display: flex;
-  flex-direction: column;
   row-gap: 40px;
-
-  @include mq(mid) {
-    // width: 1040px;
-
-    align-self: stretch;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .p-footer__logo {
@@ -42,29 +32,41 @@
   height: 36px;
 }
 
-.p-footer__body {
-  margin-block-start: 43px;
-
-  @include mq(mid) {
-    margin-block-start: 20px;
+.p-footer-tel {
+  a {
+    gap: 8px;
   }
+}
+
+.p-footer-tel__number {
+  img {
+    width: 31px;
+    height: 41px;
+  }
+}
+
+.p-footer-tel__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  padding-inline-start: 20px;
+}
+
+.p-footer__body {
+  margin-block-start: 20px;
 }
 
 .p-footer__list {
   display: flex;
-  flex-direction: column;
-  row-gap: 38.5px;
+  flex-direction: row;
+  column-gap: 24px;
 
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.56px;
   text-align: center;
-
-  @include mq(mid) {
-    flex-direction: row;
-    column-gap: 24px;
-  }
 
   li a {
     position: relative;
@@ -79,7 +81,7 @@
         height: 1px;
         left: 50%;
         bottom: -7px;
-        background: $color-text;
+        background: v.$text-main;
         transform: translateX(-50%); // ← 中央に配置するポイント
       }
     }
@@ -90,16 +92,12 @@
   margin-block-start: 32px;
   padding-top: 30px;
   align-self: stretch;
-  border-top: 2px solid $color-text;
+  border-top: 2px solid v.$text-main;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   row-gap: 16px;
-
-  @include mq(mid) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
 }
 
 .p-footer__sns {
@@ -119,6 +117,8 @@
 }
 
 .p-footer__sns-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .p-footer__copy {
