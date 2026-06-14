@@ -299,7 +299,50 @@
                 </div>
             </section>
 
-            <section id="course" class="p-course"></section>
+            <section id="course" class="l-section p-course">
+              <div class="l-inner">
+                <div class="p-course__wrap">
+                  <hgroup class="c-section-title p-course__title">
+                    <p class="c-section__title-en p-course__title-en">Course</p>
+                    <h2 class="c-section__title-ja p-course__title-ja">コース案内</h2>
+                  </hgroup>
+                  <div class="p-course__tab-wrap">
+                    <div class="p-course__tablist" role="tablist">
+                      <button class="p-course__tab" role="tab" id="tab1" aria-controls="panel1" aria-selected="true"  tabindex="0">中学1・2年生</button>
+                      <button class="p-course__tab" role="tab" id="tab2" aria-controls="panel2" aria-selected="false" tabindex="-1">中学3年生</button>
+                    </div>
+                    <div class="p-course__contents">
+                      <div class="p-course__content-wrap js-show" role="tabpanel" id="panel1" aria-labelledby="tab1" tabindex="-1">
+                        <ul class="p-course__content-list">
+                          <li class="p-course__content-item">
+                            <h3 class="p-course__content-title">自由選択コース(週60分×１)</h3>
+                            <p class="p-course__content-text">教科、授業内容を自由に選択できます。学校の予習復習、テスト勉強の習慣を身に付けます。1教科につき週1回です。</p>
+                          </li>
+                          <li class="p-course__content-item">
+                            <h3 class="p-course__content-title">苦手徹底強化コース(週120分×1)</h3>
+                            <p class="p-course__content-text">教科を問わず、毎週テーマを決めて苦手な分野を徹底的に強化します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。</p>
+                          </li>
+                        </ul>
+                        <button class="p-course__content-button" data-dialog="modal1">詳しくみる</button>
+                      </div>
+                      <div class="p-course__content-wrap" role="tabpanel" id="panel2" aria-labelledby="tab2" tabindex="-1">
+                        <ul class="p-course__content-list">
+                          <li class="p-course__content-item">
+                            <h3 class="p-course__content-title">内申点アップコース（週120分×3）</h3>
+                            <p class="p-course__content-text">学校より先取りで5教科の学習を進めます。定期テストの2週間前から目標を定めて定期テスト対策を行います。</p>
+                          </li>
+                          <li class="p-course__content-item">
+                            <h3 class="p-course__content-title">高校受験コース（週180分×4）</h3>
+                            <p class="p-course__content-text">志望校合格に向けて必要なことにターゲットを絞り、受験対策します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。</p>
+                          </li>
+                        </ul>
+                        <button class="p-course__content-button" data-dialog="modal2">詳しくみる</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             <section id="faq" class="p-faq"></section>
 
@@ -307,6 +350,122 @@
         </main>
 
         <footer class="p-footer"></footer>
+
+        <dialog id="modal1" aria-labelledby="modal-head1 modal-head1-2" aria-describedby="modal-text1 modal-text1-2" class="modal__content p-course-modal">
+            <button class="p-course-modal__close-button">&times;</button>
+            <div class="p-course-modal__inner">
+                <div class="p-course-modal__content">
+                    <ul class="p-course-modal__list">
+                        <li class="p-course-modal__item">
+                            <div class="p-course-modal__head">
+                                <h3 id="modal-head1" class="p-course-modal__head-title">自由選択コース</h3>
+                                <p id="modal-text1" class="p-course-modal__head-text">
+                                  1週間に60分、自分に必要な教科や内容を集中サポート！
+                                </p>
+                            </div>
+                            <div class="p-course-modal__body-wrap">
+                                <div class="p-course-modal__body">
+                                    <h4 class="p-course-modal__body-title">個別指導</h4>
+                                    <p class="p-course-modal__body-text">
+                                      60分×週1回<br>
+                                      月額 9,800円(税込)
+                                    </p>
+                                </div>
+                                <div class="p-course-modal__body">
+                                    <h4 class="p-course-modal__body-title">少人数グループ指導</h4>
+                                    <p class="p-course-modal__body-text">
+                                      60分×週1回<br>
+                                      月額 7,500円(税込)
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-course-modal__item">
+                            <div class="p-course-modal__head">
+                                <h3 id="modal-head1-2" class="p-course-modal__head-title">苦手徹底強化コース</h3>
+                                <p id="modal-text1-2" class="p-course-modal__head-text">
+                                  週1回120分で、苦手な教科を完全攻略！
+                                </p>
+                            </div>
+                          <div class="p-course-modal__body-wrap">
+                              <div class="p-course-modal__body">
+                                  <h4 class="p-course-modal__body-title">個別指導</h4>
+                                  <p class="p-course-modal__body-text">
+                                    120分×週1回<br>
+                                    月額 24,800円(税込)
+                                  </p>
+                              </div>
+                              <div class="p-course-modal__body">
+                                  <h4 class="p-course-modal__body-title">少人数グループ指導</h4>
+                                  <p class="p-course-modal__body-text">
+                                    120分×週1回<br>
+                                    月額 18,000円(税込)
+                                  </p>
+                              </div>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="modal2" aria-labelledby="modal-head2 modal-head2-2" aria-describedby="modal-text2 modal-text2-2" class="modal__content p-course-modal">
+          <button class="p-course-modal__close-button">&times;</button>
+          <div class="p-course-modal__inner">
+            <div class="p-course-modal__content">
+              <ul class="p-course-modal__list">
+                <li class="p-course-modal__item">
+                  <div class="p-course-modal__head">
+                    <h3 id="modal-head2" class="p-course-modal__head-title">内申点アップコース</h3>
+                    <p id="modal-text2" class="p-course-modal__head-text">
+                      テスト2週間前からの徹底対策で、成績アップ！
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body-wrap">
+                    <div class="p-course-modal__body">
+                      <h4 class="p-course-modal__body-title">個別指導</h4>
+                      <p class="p-course-modal__body-text">
+                        120分×週3回<br>
+                        月額 38,000円(税込)
+                      </p>
+                    </div>
+                    <div class="p-course-modal__body">
+                      <h4 class="p-course-modal__body-title">少人数グループ指導</h4>
+                      <p class="p-course-modal__body-text">
+                        120分×週3回<br>
+                        月額 28,000円(税込)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p-course-modal__item">
+                  <div class="p-course-modal__head">
+                    <h3 id="modal-head2-2" class="p-course-modal__head-title">高校受験コース</h3>
+                    <p id="modal-text2-2" class="p-course-modal__head-text">
+                      受験本番を突破する実践力を鍛えます！
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body-wrap">
+                    <div class="p-course-modal__body">
+                      <h4 class="p-course-modal__body-title">個別指導</h4>
+                      <p class="p-course-modal__body-text">
+                        150分×週4回<br>
+                        月額 58,000円(税込)
+                      </p>
+                    </div>
+                    <div class="p-course-modal__body">
+                      <h4 class="p-course-modal__body-title">少人数グループ指導</h4>
+                      <p class="p-course-modal__body-text">
+                        150分×週4回<br>
+                        月額 42,000円(税込)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </dialog>
 
         <script src="./assets/js/lib/swiper-bundle.min.js?v=1.4.2" defer></script>
         <script src="./assets/js/hamburger.js?v=1.5.0" defer></script>

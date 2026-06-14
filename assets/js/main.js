@@ -80,3 +80,58 @@ if (mvSwiperEl && typeof Swiper !== 'undefined') {
     }
   });
 }
+
+// コース案内タブ
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".p-course__tab").forEach(function (tab) {
+    tab.addEventListener("click", function (e) {
+      e.preventDefault();
+      // tabの切り替え
+      document.querySelectorAll(".p-course__tab").forEach(function (t) {
+        t.setAttribute("aria-selected", "false");
+      });
+      this.setAttribute("aria-selected", "true");
+      // tab panelの切り替え
+      document
+        .querySelectorAll(".p-course__content-wrap")
+        .forEach(function (panel) {
+          panel.classList.remove("js-show");
+        });
+      document
+        .getElementById(this.getAttribute("aria-controls"))
+        .classList.add("js-show");
+    });
+  });
+});
+
+// モーダルダイアログ
+const dialogs = document.querySelectorAll('dialog');
+// ダイアログを開く
+const open = document.querySelectorAll(".p-course__content-button");
+open.forEach(button => {
+  button.addEventListener('click', () => {
+    const dialogId = button.getAttribute('data-dialog');
+    const dialog = document.getElementById(dialogId);
+    dialog.showModal();
+    dialog.classList.add('js-show');
+  });
+});
+// ダイアログを閉じる
+const close = document.querySelectorAll(".p-course-modal__close-button");
+  close.forEach(button => {
+    button.addEventListener('click', () => {
+    const dialog = button.closest('dialog');
+    dialog.classList.remove('js-show');
+    dialog.close();
+  });
+});
+// オーバーレイクリックでダイアログを閉じる
+dialogs.forEach(button => {
+  button.addEventListener('click', (event) => {
+    if (event.target.closest(".p-course-modal__inner") === null) {
+      const dialog = button.closest("dialog");
+      dialog.classList.remove("js-show");
+      dialog.close();
+    }
+  });
+});

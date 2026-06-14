@@ -867,24 +867,32 @@ body.is-fixed {
 ========================= */
 .p-mv.is-show {
   /* 1. 画像 */
-  /* 2. タイトル */
-  /* 3. サブタイトル */
-  /* 4. テキスト */
-  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__image {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.9s ease, transform 1.2s ease;
 }
+.p-mv.is-show {
+  /* 2. タイトル */
+}
 .p-mv.is-show .p-mv__title {
   animation: mvTitleUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+.p-mv.is-show {
+  /* 3. サブタイトル */
 }
 .p-mv.is-show .p-mv__subTitle {
   animation: mvSubTitleReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
 }
+.p-mv.is-show {
+  /* 4. テキスト */
+}
 .p-mv.is-show .p-mv__text {
   animation: mvTextIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards, mvTextBounce 4s ease-in-out 4.2s infinite;
+}
+.p-mv.is-show {
+  /* 5. ボタン */
 }
 .p-mv.is-show .p-mv__contact {
   animation: mvContactIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.35s forwards;
@@ -1031,6 +1039,298 @@ body.is-fixed {
     transform: scale(1);
   }
 }
+.p-course {
+  background-color: #ecf6f9;
+}
+
+.p-course__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.p-course__title-en {
+  text-transform: uppercase;
+}
+
+.p-course__tab-wrap {
+  position: relative;
+  width: min(100%, 880px);
+  margin-inline: auto;
+}
+.p-course__tab-wrap::after {
+  content: "";
+  position: absolute;
+  width: 122px;
+  height: auto;
+  aspect-ratio: 122/167;
+  background: url("../img/common/course-icon.svg") right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  right: 100%;
+}
+
+.p-course__tablist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.p-course__tab {
+  color: #b4adad;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.8px;
+  padding: 10px;
+  background: #f7f7f7;
+}
+.p-course__tab:nth-of-type(1) {
+  border-radius: 10px 0 0 0;
+}
+.p-course__tab:nth-of-type(2) {
+  border-radius: 0 10px 0 0;
+}
+.p-course__tab[aria-selected=true] {
+  color: #66b1c5;
+  border-radius: 10px 10px 0 0;
+  padding-block: 20px;
+  background: #ffffff;
+  pointer-events: none;
+}
+.p-course__tab[aria-selected=false] {
+  margin-block-start: 9px;
+  transition: opacity 0.3s ease;
+}
+@media (any-hover: hover) {
+  .p-course__tab[aria-selected=false]:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.p-course__content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  background: #ffffff;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.p-course__content-wrap.js-show {
+  padding: 40px 148px;
+  opacity: 1;
+  visibility: visible;
+  height: fit-content;
+}
+
+.p-course__content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p-course__content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.p-course__content-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1.1px;
+}
+
+.p-course__content-text {
+  line-height: 160%;
+  letter-spacing: 0.8px;
+}
+
+.p-course__content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 54px;
+  border-radius: 10px;
+  border: 2px solid #66b1c5;
+  background-color: #66b1c5;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0.48px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.p-course__content-button::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("../img/contact/contact-arrow.svg") no-repeat center/contain;
+}
+@media (any-hover: hover) {
+  .p-course__content-button:hover {
+    border: 2px solid #66b1c5;
+    background-color: #ffffff;
+    color: #66b1c5;
+  }
+  .p-course__content-button:hover::after {
+    background: url("../img/contact/contact-arrow-blue.svg") no-repeat center/contain;
+  }
+}
+
+button {
+  background: none;
+}
+
+:where(dialog) {
+  width: unset;
+  max-width: unset;
+  padding: unset;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  overflow: unset;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.wrapper:has(dialog[open]) {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+dialog::backdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+dialog.js-show.p-course-modal {
+  opacity: 1;
+}
+dialog.js-show::backdrop {
+  opacity: 0.9;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #ECF6F9;
+}
+
+.p-course-modal {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: min(905px, 95%);
+  height: min(80vh, 560px);
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+.p-course-modal__inner {
+  overflow-y: scroll;
+  height: inherit;
+  max-height: inherit;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.p-course-modal__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.p-course-modal__content {
+  height: fit-content;
+  padding: 80px 120px 106px;
+}
+
+.p-course-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.p-course-modal__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p-course-modal__head {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.p-course-modal__head-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1.1px;
+}
+
+.p-course-modal__head-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.8px;
+}
+
+.p-course-modal__body-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.p-course-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.p-course-modal__body-title {
+  border-radius: 4px;
+  background: #66b1c5;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.8px;
+  padding-block: 4px;
+  text-align: center;
+}
+
+.p-course-modal__body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.8px;
+}
+
+.p-course-modal__close-button {
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  right: 36px;
+  font-size: 20px;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  background: #274b66;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+@media (any-hover: hover) {
+  .p-course-modal__close-button:hover {
+    cursor: pointer;
+  }
+}
+
 .p-teacher {
   background-color: #f7f7f7;
   overflow: hidden;
