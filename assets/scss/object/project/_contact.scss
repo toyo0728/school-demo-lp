@@ -50,14 +50,21 @@
 .p-contact__row {
   display: grid;
   row-gap: 8px;
-
   margin-block-start: 24px;
+
+  &:first-child {
+    margin-block-start: 60px;
+  }
 }
 
 .p-contact__row-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
+
+  .p-contact__row {
+    margin-block-start: 24px;
+  }
 }
 
 .p-contact__head {
@@ -237,7 +244,7 @@ input[type="checkbox"] + span {
 .p-contact__acceptance {
   display: flex;
   align-items: center;
-  margin-block-start: 17px;
+  margin-block-start: 12px;
   justify-content: start;
   column-gap: 0;
 
