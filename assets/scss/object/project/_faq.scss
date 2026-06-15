@@ -1,17 +1,41 @@
 @use "../../global" as v;
 
 // よくある質問セクション
-.faq {
+.p-faq {
     background-color: v.$gray-bg;
     padding-block: 120px;
+    position: relative;
 
+    &:before {
+        content: "";
+        display: none;
+        @media (max-width: 1179px) {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 40px;
+        right: 0%;
+        width: clamp(70px, 9.5vw, 137px);
+        height: clamp(80px, 8.6vw, 153px);
+        background: url("/assets/img/faq/faq-icon.svg") no-repeat center / contain;
+        transform: translate(-100%, 50%);
+        }
+        @media (max-width: 1000px) {
+        top: 30px;
+        right: -46px;
+        transform: translate(-100%, 50%);
+        width: 77px;
+        height: 86px;
+        }
+    }
     @media (max-width: 767px) {
         padding-block: 80px;
         padding-block-start: 104px;
     }
 }
 
-.faq__inner.--narrow {
+
+.p-faq__inner.--narrow {
     width:100%;
     max-width: 960px;
     margin-inline: auto;
@@ -26,7 +50,7 @@
     margin-block-start: 60px;
 }
 
-.faq__title {
+.p-faq__title {
     font-size: 35px;
     font-weight: 700;
     line-height: 1.5;
@@ -42,7 +66,7 @@
     }
 }
 
-.faq__title::before {
+.p-faq__title::before {
     position: absolute;
     top: -12px;
     left: 50%;
@@ -60,18 +84,17 @@
     }
 }
 
-.faq__title.--faq::before {
+.p-faq__title.--faq::before {
     content: 'FAQ';
 
     @media (max-width: 767px) {
-        left: 85px;
+        left: 5%;
     }
 }
 
 summary {
     display: block;
     list-style: none;
-    margin-block-end: 32px;
 
     &::-webkit-details-marker {
         display: none;
@@ -84,10 +107,10 @@ summary {
     }
 }
 
-.faq__items {
+.p-faq__items {
     position: relative;
     border-radius: 10px;
-    margin-block-start: 60px;
+    margin-block-start: 40px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -97,34 +120,19 @@ summary {
         position: absolute;
         bottom: 0;
         right: -2%;
-        width: clamp(70px, 9.5vw, 137px);
-        height: clamp(80px, 10.6vw, 153px);
+        width: clamp(70px, 8.5vw, 137px);
+        height: clamp(80px, 9.6vw, 153px);
         background: url("/assets/img/faq/faq-icon.svg") no-repeat center / contain;
         transform: translate(100%, 0);
-    }
 
-    @media (max-width: 1200px) {
-        margin-block-start: 40px;
-        &::before {
-        top: -26%;
-        right: 15%;
-        width: 77px;
-        height: 86px;
-        }
+        @media (max-width: 1180px) {
+        display: none;
     }
-    @media (max-width: 767px) {
-        &::before {
-        top: -22px;
-        right: -67.2px;
-        width:  77px;
-        height: 86px;
-        transform: translate(-100%, -100%);
-        }
     }
 }
 
 
-.faq__item {
+.p-faq__item {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.8;
@@ -141,14 +149,14 @@ summary {
     }
 }
 
-.faq__item:hover {
+.p-faq__item:hover {
     &:hover {
         opacity: 0.8;
         cursor: pointer;
     }
 }
 
-.faq__item.js-details[open] {
+.p-faq__item.js-details[open] {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.8;
@@ -164,7 +172,7 @@ summary {
     }
 }
 
-.faq__question {
+.p-faq__question {
     padding-left: 24px;
     padding-right: 34px;
     padding-block: 19.5px;
@@ -218,15 +226,15 @@ summary {
     }
 }
 
-.js-details.is-opened .faq__question::before {
+.js-details.is-opened .p-faq__question::before {
     transform: translateY(-50%) rotate(90deg);
 }
 
-details[open] .faq__question::after {
+details[open] .p-faq__question::after {
     rotate: 0deg;
 }
 
-.faq__question-text {
+.p-faq__question-text {
     list-style: none;
     position: relative;
     padding-inline: 62px 24px;
@@ -263,13 +271,13 @@ details[open] .faq__question::after {
 
         @media (max-width: 767px) {
             translate: 0 0;
-            top: 0;
+            top: 2px;
             left: 8px;
         }
     }
 }
 
-.faq__answer-text {
+.p-faq__answer-text {
     padding-right: 28px;
     padding-left: 26px;
     font-weight: 500;
@@ -312,8 +320,8 @@ details[open] .faq__question::after {
     }
 }
 
-.faq__answer {
-    padding-block-start: 24px;
+.p-faq__answer {
+    padding-block-start: 22px;
     padding-left: 60px;
     background-color: v.$gray-bg;
 
