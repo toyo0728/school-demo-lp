@@ -1076,7 +1076,7 @@ body.is-fixed {
 }
 @media (max-width: 1000px) {
   .p-cta2__inner {
-    max-width: 500px;
+    max-width: 367px;
     padding-inline: 16px;
   }
 }
@@ -1087,7 +1087,7 @@ body.is-fixed {
   background-color: #f7f7f7;
   height: 275px;
   border-radius: 20px;
-  padding: 40px 100px;
+  padding-block: 40px;
 }
 @media (max-width: 1000px) {
   .p-cta2__bgwrap {
@@ -1115,22 +1115,12 @@ body.is-fixed {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 32px;
+  margin-top: 26px;
 }
 @media (max-width: 1000px) {
   .p-cta2__textwrap {
     display: block;
     margin-top: 15px;
-  }
-}
-
-.p-cta2__telbox {
-  width: 100%;
-  max-width: 281px;
-}
-@media (max-width: 1000px) {
-  .p-cta2__telbox {
-    margin-inline: auto;
   }
 }
 
@@ -1206,7 +1196,7 @@ body.is-fixed {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 2px;
+  gap: 8px;
   max-width: 281px;
   width: 100%;
   flex-wrap: nowrap;
@@ -1281,17 +1271,20 @@ body.is-fixed {
 }
 
 .p-cta2-contact {
+  margin-block-start: 133px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   width: 100%;
   max-width: 352px;
-  margin-inline: auto;
+  align-items: center;
 }
 @media (max-width: 1000px) {
   .p-cta2-contact {
-    margin-block-start: 30px;
+    margin-block-start: 18px;
     width: 100%;
+    order: 3;
+    gap: 0;
   }
 }
 @media (min-width: 1700px) {
@@ -1307,14 +1300,16 @@ body.is-fixed {
 
 .p-cta2__contact-text {
   font-size: 20px;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  color: #274b66;
   width: 100%;
+  font-weight: 700;
+  line-height: 160%;
   letter-spacing: 1px;
   white-space: nowrap;
+  opacity: 0;
   text-align: center;
+  transform: translateY(16px) scale(0.96);
+  transform-origin: center bottom;
+  will-change: transform, opacity;
 }
 @media (min-width: 1600px) {
   .p-cta2__contact-text {
@@ -1329,69 +1324,82 @@ body.is-fixed {
 }
 
 .p-cta2-button {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  /* ボタン本体も少し後から出す */
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
+}
+
+.p-cta2__button {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding: 20px 32px;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 32px;
+  border-radius: 10px;
   border: 2px solid #66b1c5;
   background-color: #66b1c5;
   color: #ffffff;
-  border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 160%;
   letter-spacing: 0.48px;
   white-space: nowrap;
   transition: all 0.3s ease;
-  position: relative;
-  gap: 16px;
 }
-.p-cta2-button::before, .p-cta2-button::after {
+.p-cta2__button::before, .p-cta2__button::after {
   content: "";
   display: block;
   flex-shrink: 0;
 }
-.p-cta2-button::before {
+.p-cta2__button::before {
   width: 18px;
   height: 13px;
   background: url("../img/contact/contact-icon.svg") no-repeat center/contain;
 }
-.p-cta2-button::after {
+.p-cta2__button::after {
   width: 18px;
   height: 18px;
   background: url("../img/contact/contact-arrow.svg") no-repeat center/contain;
 }
 @media (any-hover: hover) {
-  .p-cta2-button:hover {
+  .p-cta2__button:hover {
     border: 2px solid #66b1c5;
     background-color: #ffffff;
     color: #66b1c5;
   }
-  .p-cta2-button:hover::before {
+  .p-cta2__button:hover::before {
     background: url("../img/contact/contact-icon-blue.svg") no-repeat center/contain;
   }
-  .p-cta2-button:hover::after {
+  .p-cta2__button:hover::after {
     background: url("../img/contact/contact-arrow-blue.svg") no-repeat center/contain;
   }
 }
 
-.p-cta2__button-text {
+.p-cta2-button {
+  width: clamp(306px, 24.44vw, 500px);
+  padding: 20px 32px;
   font-size: 20px;
   letter-spacing: 1px;
+  gap: 16px;
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  .p-cta2__button-text {
-    gap: 8px;
+  .p-cta2-button {
+    max-width: 319px;
+    padding: 20px;
     font-size: 18px;
     letter-spacing: 0.9px;
+    gap: 12px;
   }
 }
 @media (max-width: 374px) {
-  .p-cta2__button-text {
-    padding: 20 16;
-    font-size: clamp(14px, 4vw, 16px);
+  .p-cta2-button {
+    max-width: 268px;
   }
 }
 
@@ -1429,4 +1437,4 @@ body.is-fixed {
   text-align: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cs.map */

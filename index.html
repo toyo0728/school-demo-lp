@@ -167,35 +167,34 @@
 
       <!-- CTA2 -->
 		<div class="p-cta2">
-			<div class="p-cta2__bg parallax2">
+			<div class="p-cta2__bg js-parallax2">
 				<picture class="js-parallax2">
-					<img src="./assets/img/common/cta2-bg.webp" width="" height="" alt="cta2の背景画像">
+					<img src="./assets/img/common/cta2-bg.webp" width="" height="" alt="cta2の背景画像"  loading="lazy">
 				</picture>
 			</div>
 			<div class="p-cta2__inner">
-				<div class="p-cta2__box">
-					<h2 class="p-cta2__title">まずはお気軽に<br class="p-cta-br">ご相談ください</h2>
-					<div class="p-cta2__group">
-						<div class="p-cta2__tel">
-							<p class="p-cta2__text">お電話でのお問い合わせ</p>
-							<div class="tel__actions --cta2">
-								<a href="tel:0120123456" class="tel --cta2">
-									<span class="tel__icon --cta2">
-										<img src="./assets/img/common/tel-icon-blue.svg" width="" height="" alt="電話アイコン">
+				<div class="p-cta2__bgwrap">
+					<h2 class="p-cta2__title">まずはお気軽に<br class="p-cta2-br">ご相談ください</h2>
+					<div class="p-cta2__textwrap">
+						<div class="p-cta2__telbox">
+							<p class="p-cta2__telbox-text">お電話でのお問い合わせ</p>
+							<div class="p-cta2__telwrap-actions">
+								<a href="tel:0120123456" class="p-cta2__no">
+									<span class="p-cta2__icon">
+										<img src="./assets/img/common/tel-icon-blue.svg" width="22px" height="33" alt="電話アイコン">
 									</span>
-									<span class="tel__number --cta2">0120-12-3456</span>
+									<span class="p-cta2__number">0120-12-3456</span>
 								</a>
-								<div class="tel__time --cta2">受付時間：平日 9:00〜19:00</div>
+								<div class="p-cta2__time">受付時間：平日 9:00〜19:00</div>
 							</div>
 						</div>
-						<div class="l-mv-contactWrap">
-            <p class="p-mv__text">\ 今なら入会金無料！/</p>
-            <a href="#contact" class="c-contact c-contact--large p-cta2__contact">
-              <span class="p-mv__contact-text">お問い合わせはこちら</span>
-              <span class="p-mv__shine" aria-hidden="true"></span>
-            </a>
+            <div class="p-cta2-contact">
+              <p class="p-cta2__contact-text">\ 今なら入会金無料！/</p>
+              <a href="#contact" class="p-cta2-button">
+                <span class="p-cta2__button-text">お問い合わせはこちら</span>
+              </a>
+            </div>
           </div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -210,6 +209,9 @@
 
     <footer class="p-footer"></footer>
 
+    <!-- GSAP CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./assets/js/lib/swiper-bundle.min.js?v=1.4.2" defer></script>
     <script src="./assets/js/hamburger.js?v=1.5.0" defer></script>
     <script src="./assets/js/main.js?v=1.5.0" defer></script>
