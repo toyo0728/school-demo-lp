@@ -185,6 +185,8 @@ button {
 
 body:has(dialog[open]) {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .wrapper:has(dialog[open]) {
@@ -202,7 +204,7 @@ dialog {
       opacity: 1;
     }
     &::backdrop {
-      opacity: 0.9;
+      opacity: 1;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), #ECF6F9;
     }
   }
@@ -312,6 +314,14 @@ dialog {
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.8px;
+}
+
+.p-course-modal__title-en {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  translate: -50% 0;
+  text-transform: uppercase;
 }
 
 .p-course-modal__close-button {

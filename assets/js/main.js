@@ -105,34 +105,50 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // モーダルダイアログ
-const dialogs = document.querySelectorAll('dialog');
-// ダイアログを開く
-const open = document.querySelectorAll(".p-course__content-button");
-open.forEach(button => {
-  button.addEventListener('click', () => {
-    const dialogId = button.getAttribute('data-dialog');
-    const dialog = document.getElementById(dialogId);
+document.addEventListener("DOMContentLoaded", function () {
+  const dialogs = document.querySelectorAll("dialog");
+
+  function openDialog(dialog) {
+    const scrollY = window.scrollY;
     dialog.showModal();
-    dialog.classList.add('js-show');
-  });
-});
-// ダイアログを閉じる
-const close = document.querySelectorAll(".p-course-modal__close-button");
-  close.forEach(button => {
-    button.addEventListener('click', () => {
-    const dialog = button.closest('dialog');
-    dialog.classList.remove('js-show');
+    dialog.classList.add("js-show");
+    document.body.style.top = `-${scrollY}px`;
+  }
+
+  function closeDialog(dialog) {
+    const scrollY = parseInt(document.body.style.top || "0") * -1;
+    dialog.classList.remove("js-show");
     dialog.close();
+    document.body.style.top = "";
+    window.scrollTo(0, scrollY);
+  }
+
+  // ダイアログを開く
+  const open = document.querySelectorAll(".p-course__content-button");
+  open.forEach((button) => {
+    button.addEventListener("click", () => {
+      const dialogId = button.getAttribute("data-dialog");
+      const dialog = document.getElementById(dialogId);
+      openDialog(dialog);
+    });
   });
-});
-// オーバーレイクリックでダイアログを閉じる
-dialogs.forEach(button => {
-  button.addEventListener('click', (event) => {
-    if (event.target.closest(".p-course-modal__inner") === null) {
-      const dialog = button.closest("dialog");
-      dialog.classList.remove("js-show");
-      dialog.close();
-    }
+
+  // ダイアログを閉じる
+  const close = document.querySelectorAll(".p-course-modal__close-button");
+  close.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeDialog(button.closest("dialog"));
+    });
+  });
+
+  // オーバーレイクリックでダイアログを閉じる
+  dialogs.forEach((dialog) => {
+    dialog.addEventListener("click", (event) => {
+      if (event.target.closest(".p-course-modal__inner") === null) {
+        closeDialog(dialog);
+      }
+    });
   });
 });
 
