@@ -23,6 +23,10 @@
         <meta property="og:image" content="https://toyo-demo.site/assets/img/common/ogp.png" />
         <meta property="og:locale" content="ja_JP" />
 
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
         <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2" />
         <link rel="stylesheet" href="./assets/css/style.css?v=1.4.2" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -136,7 +140,67 @@
                 </div>
             </section>
 
-            <section id="mission" class="p-mission"></section>
+            <section id="mission" class="l-section p-mission">
+                <div class="l-inner">
+                    <div class="p-mission__wrap">
+                        <div class="p-mission__heading">
+                            <hgroup class="c-section-title p-mission__title">
+                                <p class="c-section__title-en p-mission__title-en">Mission</p>
+                                <h2 class="c-section__title-ja p-mission__title-ja">子どもの自信を育てる</h2>
+                            </hgroup>
+                            <p class="p-mission__desc">
+                              一人一人に合わせた個別カリキュラムで勉強のやり方を指導し、<br class="hidden-sp">子どもたちを勉強好きに導きます。お子様が自ら喜びを見つけ、<br class="hidden-sp">成長の喜びを感じられるよう、全力でサポートいたします。
+                            </p>
+                        </div>
+                        <ul class="p-mission__cards">
+                            <li class="p-mission__card animated__fadeIn --delay0">
+                                <div class="p-mission__card-image">
+                                    <img src="./assets/img/common/support.svg" alt="" width="260" height="148" loading="lazy" decoding="async">
+                                </div>
+                                <div class="p-mission__card-content">
+                                    <h3 class="p-mission__card-title">自信をつける<br>オリジナルの学習方法</h3>
+                                    <p class="p-mission__card-text">
+                                        「問題を1問解く」といった小さな成功体験を積み上げ、自信をつけていきます。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="p-mission__card animated__fadeIn --delay1">
+                                <div class="p-mission__card-image">
+                                    <img src="./assets/img/common/caricuram.svg" alt="" width="260" height="148" loading="lazy" decoding="async">
+                                </div>
+                                <div class="p-mission__card-content">
+                                    <h3 class="p-mission__card-title">一人ひとりに合った<br>目標設定</h3>
+                                    <p class="p-mission__card-text">
+                                        理解度に合わせたカリキュラムを提供。得意分野を伸ばし、苦手分野の克服を目指します。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="p-mission__card animated__fadeIn --delay2">
+                                <div class="p-mission__card-image">
+                                    <img src="./assets/img/common/teacher.svg" alt="" width="260" height="148" loading="lazy" decoding="async">
+                                </div>
+                                <div class="p-mission__card-content">
+                                    <h3 class="p-mission__card-title">プロフェッショナルな<br>講師陣</h3>
+                                    <p class="p-mission__card-text">
+                                        経験豊富な講師が、生徒の個性を見極めた指導を行います。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="p-mission__card animated__fadeIn --delay3">
+                                <div class="p-mission__card-image">
+                                    <img src="./assets/img/common/home.svg" alt="" width="260" height="148" loading="lazy" decoding="async">
+                                </div>
+                                <div class="p-mission__card-content">
+                                    <h3 class="p-mission__card-title">苦手を克服する<br>アットホームな環境</h3>
+                                    <p class="p-mission__card-text">
+                                        安心して質問できる環境を整備。勉強が楽しいと感じられる場づくりを心がけています。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <section id="reason" class="p-reason l-section">
                 <div class="p-reason__inner l-inner">
