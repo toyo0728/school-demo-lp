@@ -1,0 +1,110 @@
+@use "../../global" as v;
+
+// 選ばれる理由セクション
+
+.p-reason {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url("../img/common/reason-bg.webp") no-repeat center / cover;
+}
+
+.p-reason__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.p-reason__title--wrap {
+    flex-direction: row;
+    position: sticky;
+    top: 95px;
+}
+
+.p-reason__title {
+    width: 245px;
+    flex-shrink: 0;
+}
+
+.p-reason__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    flex: 1;
+    max-width: 766px;
+}
+
+.p-reason__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: v.$gray-bg;
+    border-radius: 20px;
+    padding: 25px 32px;
+    min-height: 280px;
+}
+
+.p-reason__badge {
+    position: absolute;
+    top: -11px;
+    left: -21px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: v.$main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: v.$white;
+    font-family: v.$font-en;
+    font-weight: 700;
+}
+
+.p-reason__badge-label {
+    font-size: 6px;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+}
+
+.p-reason__badge-num {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.p-reason__textbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: v.$text-main;
+}
+
+.p-reason__heading {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.1px;
+}
+
+.p-reason__body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.8px;
+}
+
+.p-reason__img-wrap {
+    width: 306px;
+    height: 228px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

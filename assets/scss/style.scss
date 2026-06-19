@@ -22,7 +22,10 @@
 @use "object/project/teacher";
 @use "object/project/faq";
 @use "object/project/contact";
+@use "object/project/reason";
+@use "object/project/mission";
 
 // Object - Utility
 @use "object/utility/hidden";
 @use "object/utility/spacing";
+@use "object/utility/animation";

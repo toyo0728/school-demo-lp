@@ -29,6 +29,16 @@
     />
     <meta property="og:locale" content="ja_JP" />
 
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+
     <link
       rel="stylesheet"
       href="./assets/css/lib/swiper-bundle.min.css?v=1.4.2"
@@ -191,13 +201,439 @@
         </div>
       </section>
 
-      <section id="mission" class="p-mission"></section>
+      <section id="mission" class="l-section p-mission">
+        <div class="l-inner">
+          <div class="p-mission__wrap">
+            <div class="p-mission__heading">
+              <hgroup class="c-section-title p-mission__title">
+                <p class="c-section__title-en p-mission__title-en">Mission</p>
+                <h2 class="c-section__title-ja p-mission__title-ja">
+                  子どもの自信を育てる
+                </h2>
+              </hgroup>
+              <p class="p-mission__desc">
+                一人一人に合わせた個別カリキュラムで勉強のやり方を指導し、<br
+                  class="hidden-sp"
+                />子どもたちを勉強好きに導きます。お子様が自ら喜びを見つけ、<br
+                  class="hidden-sp"
+                />成長の喜びを感じられるよう、全力でサポートいたします。
+              </p>
+            </div>
+            <ul class="p-mission__cards">
+              <li class="p-mission__card animated__fadeIn --delay0">
+                <div class="p-mission__card-image">
+                  <img
+                    src="./assets/img/common/support.svg"
+                    alt=""
+                    width="260"
+                    height="148"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-mission__card-content">
+                  <h3 class="p-mission__card-title">
+                    自信をつける<br />オリジナルの学習方法
+                  </h3>
+                  <p class="p-mission__card-text">
+                    「問題を1問解く」といった小さな成功体験を積み上げ、自信をつけていきます。
+                  </p>
+                </div>
+              </li>
+              <li class="p-mission__card animated__fadeIn --delay1">
+                <div class="p-mission__card-image">
+                  <img
+                    src="./assets/img/common/caricuram.svg"
+                    alt=""
+                    width="260"
+                    height="148"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-mission__card-content">
+                  <h3 class="p-mission__card-title">
+                    一人ひとりに合った<br />目標設定
+                  </h3>
+                  <p class="p-mission__card-text">
+                    理解度に合わせたカリキュラムを提供。得意分野を伸ばし、苦手分野の克服を目指します。
+                  </p>
+                </div>
+              </li>
+              <li class="p-mission__card animated__fadeIn --delay2">
+                <div class="p-mission__card-image">
+                  <img
+                    src="./assets/img/common/teacher.svg"
+                    alt=""
+                    width="260"
+                    height="148"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-mission__card-content">
+                  <h3 class="p-mission__card-title">
+                    プロフェッショナルな<br />講師陣
+                  </h3>
+                  <p class="p-mission__card-text">
+                    経験豊富な講師が、生徒の個性を見極めた指導を行います。
+                  </p>
+                </div>
+              </li>
+              <li class="p-mission__card animated__fadeIn --delay3">
+                <div class="p-mission__card-image">
+                  <img
+                    src="./assets/img/common/home.svg"
+                    alt=""
+                    width="260"
+                    height="148"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-mission__card-content">
+                  <h3 class="p-mission__card-title">
+                    苦手を克服する<br />アットホームな環境
+                  </h3>
+                  <p class="p-mission__card-text">
+                    安心して質問できる環境を整備。勉強が楽しいと感じられる場づくりを心がけています。
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-      <section id="reason" class="p-reason"></section>
+      <section id="reason" class="p-reason l-section">
+        <div class="p-reason__inner l-inner">
+          <div class="p-reason__title--wrap c-section-title--left">
+            <div class="p-reason__title">
+              <p class="c-section__title-en">REASON</p>
+              <h2 class="c-section__title-ja">選ばれる理由</h2>
+            </div>
+            <div class="p-reason__title-img">
+              <img
+                src="./assets/img/common/reason-icon.svg"
+                width="85"
+                height="172"
+                alt="選ばれる理由"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <ul class="p-reason__list">
+            <li class="p-reason__item">
+              <div class="p-reason__badge">
+                <span class="p-reason__badge-label">REASON</span>
+                <span class="p-reason__badge-num">01</span>
+              </div>
+              <div class="p-reason__textbox">
+                <h3 class="p-reason__heading">講師との距離が近い</h3>
+                <p class="p-reason__body">
+                  「いつでも気軽に質問できる」「何度でも丁寧に教えてくれる」「勉強以外の話も気軽にできる」――そんな親しみやすさが、多くの生徒に選ばれる理由です。
+                </p>
+              </div>
+              <div class="p-reason__img-wrap">
+                <img
+                  src="./assets/img/common/reason-1.webp"
+                  width="306"
+                  height="228"
+                  alt="講師との距離が近い"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="p-reason__item">
+              <div class="p-reason__badge">
+                <span class="p-reason__badge-label">REASON</span>
+                <span class="p-reason__badge-num">02</span>
+              </div>
+              <div class="p-reason__textbox">
+                <h3 class="p-reason__heading">できるまでとことんサポート</h3>
+                <p class="p-reason__body">
+                  「講義→問題演習→解説」を繰り返します。「講義」で聞いたことが「わかった気」で終わってないかを確かめ、理解が不十分であれば何度でも説明をします。
+                </p>
+              </div>
+              <div class="p-reason__img-wrap">
+                <img
+                  src="./assets/img/common/reason-2.webp"
+                  width="306"
+                  height="228"
+                  alt="できるまでとことんサポート"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="p-reason__item">
+              <div class="p-reason__badge">
+                <span class="p-reason__badge-label">REASON</span>
+                <span class="p-reason__badge-num">03</span>
+              </div>
+              <div class="p-reason__textbox">
+                <h3 class="p-reason__heading">学校に合わせた個別指導</h3>
+                <p class="p-reason__body">
+                  学校の授業内容や定期テストの傾向を把握し、それぞれの生徒に合った学習プランを提供しています。一人ひとりのレベルに寄り添った丁寧な指導で、無理なく学力を伸ばします。
+                </p>
+              </div>
+              <div class="p-reason__img-wrap">
+                <img
+                  src="./assets/img/common/reason-3.webp"
+                  width="306"
+                  height="228"
+                  alt="学校に合わせた個別指導"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="p-reason__item">
+              <div class="p-reason__badge">
+                <span class="p-reason__badge-label">REASON</span>
+                <span class="p-reason__badge-num">04</span>
+              </div>
+              <div class="p-reason__textbox">
+                <h3 class="p-reason__heading">みんなの自習室</h3>
+                <p class="p-reason__body">
+                  授業時間外も安心して学べる環境を提供しています。開校中のすべての時間、自習室を自由にご利用いただけます。自習中も講師が見守っており、学習の進捗や宿題の状況を把握します。
+                </p>
+              </div>
+              <div class="p-reason__img-wrap">
+                <img
+                  src="./assets/img/common/reason-4.webp"
+                  width="306"
+                  height="228"
+                  alt="みんなの自習室"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      <section id="teacher" class="p-teacher"></section>
+      <section id="teacher" class="p-teacher l-section">
+        <div class="p-teacher__inner l-inner">
+          <div class="p-teacher__title c-section-title--left">
+            <p class="c-section__title-en">TEACHER</p>
+            <h2 class="c-section__title-ja">講師紹介</h2>
+          </div>
+          <div class="p-teacher-swiper-container">
+            <div class="swiper p-teacher-swiper">
+              <div class="swiper-wrapper p-teacher-swiper-wrapper">
+                <div class="swiper-slide p-teacher-swiper-slide">
+                  <div class="p-teacher__img-wrap">
+                    <img
+                      src="./assets/img/common/teacher-1.webp"
+                      width="352"
+                      height="260"
+                      alt="佐藤 翔太"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-teacher__textbox">
+                    <div class="p-teacher__meta">
+                      <div class="p-teacher__subjects">
+                        <span class="p-teacher__subject">国語</span>
+                        <span class="p-teacher__subject">英語</span>
+                      </div>
+                      <h3 class="p-teacher__name">
+                        佐藤 翔太（さとう しょうた）
+                      </h3>
+                    </div>
+                    <p class="p-teacher__body">
+                      「難しい文章が苦手」「単語が覚えられない」などの悩みを一緒に解決しましょう！気軽に話せる兄貴分として、みんなを応援します！
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide p-teacher-swiper-slide">
+                  <div class="p-teacher__img-wrap">
+                    <img
+                      src="./assets/img/common/teacher-2.webp"
+                      width="352"
+                      height="260"
+                      alt="高橋 彩音"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-teacher__textbox">
+                    <div class="p-teacher__meta">
+                      <div class="p-teacher__subjects">
+                        <span class="p-teacher__subject">理科</span>
+                        <span class="p-teacher__subject">社会</span>
+                      </div>
+                      <h3 class="p-teacher__name">
+                        高橋 彩音（たかはし あやね）
+                      </h3>
+                    </div>
+                    <p class="p-teacher__body">
+                      実験や歴史の話が好きなので、興味を引き出す工夫を心がけています。「勉強が苦手」と感じている子にも楽しんでもらえる授業を目指しています！
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide p-teacher-swiper-slide">
+                  <div class="p-teacher__img-wrap">
+                    <img
+                      src="./assets/img/common/teacher-3.webp"
+                      width="352"
+                      height="260"
+                      alt="松本 大輝"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-teacher__textbox">
+                    <div class="p-teacher__meta">
+                      <div class="p-teacher__subjects">
+                        <span class="p-teacher__subject">数学</span>
+                        <span class="p-teacher__subject">英語</span>
+                      </div>
+                      <h3 class="p-teacher__name">
+                        松本 大輝（まつもと だいき）
+                      </h3>
+                    </div>
+                    <p class="p-teacher__body">
+                      勉強を「難しい」ではなく「楽しい」に変える方法を一緒に見つけましょう。「どうやって勉強するのがいいの？」などの相談もお気軽にしてくださいね。
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide p-teacher-swiper-slide">
+                  <div class="p-teacher__img-wrap">
+                    <img
+                      src="./assets/img/common/teacher-4.webp"
+                      width="352"
+                      height="260"
+                      alt="山田 優子"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-teacher__textbox">
+                    <div class="p-teacher__meta">
+                      <div class="p-teacher__subjects">
+                        <span class="p-teacher__subject">社会</span>
+                      </div>
+                      <h3 class="p-teacher__name">
+                        山田 優子（やまだ ゆうこ）
+                      </h3>
+                    </div>
+                    <p class="p-teacher__body">
+                      勉強の「なぜ？」を一緒に解き明かすのが大好きです。趣味は手芸や料理です。勉強以外のことでも何でも気軽に話してくださいね！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-teacher__bar">
+              <div class="swiper-pagination p-teacher-swiper-pagination"></div>
+              <div class="p-teacher__nav">
+                <div
+                  class="swiper-button-prev p-teacher__btn-prev"
+                  role="button"
+                  aria-label="前へ"
+                ></div>
+                <div
+                  class="swiper-button-next p-teacher__btn-next"
+                  role="button"
+                  aria-label="次へ"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section id="course" class="p-course"></section>
+      <section id="course" class="l-section p-course">
+        <div class="l-inner">
+          <div class="p-course__wrap">
+            <hgroup class="c-section-title p-course__title">
+              <p class="c-section__title-en p-course__title-en">Course</p>
+              <h2 class="c-section__title-ja p-course__title-ja">コース案内</h2>
+            </hgroup>
+            <div class="p-course__tab-wrap">
+              <div class="p-course__tablist" role="tablist">
+                <button
+                  class="p-course__tab"
+                  role="tab"
+                  id="tab1"
+                  aria-controls="panel1"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  中学1・2年生
+                </button>
+                <button
+                  class="p-course__tab"
+                  role="tab"
+                  id="tab2"
+                  aria-controls="panel2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  中学3年生
+                </button>
+              </div>
+              <div class="p-course__contents">
+                <div
+                  class="p-course__content-wrap js-show"
+                  role="tabpanel"
+                  id="panel1"
+                  aria-labelledby="tab1"
+                  tabindex="-1"
+                >
+                  <ul class="p-course__content-list">
+                    <li class="p-course__content-item">
+                      <h3 class="p-course__content-title">
+                        自由選択コース(週60分×１)
+                      </h3>
+                      <p class="p-course__content-text">
+                        教科、授業内容を自由に選択できます。学校の予習復習、テスト勉強の習慣を身に付けます。1教科につき週1回です。
+                      </p>
+                    </li>
+                    <li class="p-course__content-item">
+                      <h3 class="p-course__content-title">
+                        苦手徹底強化コース(週120分×1)
+                      </h3>
+                      <p class="p-course__content-text">
+                        教科を問わず、毎週テーマを決めて苦手な分野を徹底的に強化します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。
+                      </p>
+                    </li>
+                  </ul>
+                  <button class="p-course__content-button" data-dialog="modal1">
+                    詳しくみる
+                  </button>
+                </div>
+                <div
+                  class="p-course__content-wrap"
+                  role="tabpanel"
+                  id="panel2"
+                  aria-labelledby="tab2"
+                  tabindex="-1"
+                >
+                  <ul class="p-course__content-list">
+                    <li class="p-course__content-item">
+                      <h3 class="p-course__content-title">
+                        内申点アップコース（週120分×3）
+                      </h3>
+                      <p class="p-course__content-text">
+                        学校より先取りで5教科の学習を進めます。定期テストの2週間前から目標を定めて定期テスト対策を行います。
+                      </p>
+                    </li>
+                    <li class="p-course__content-item">
+                      <h3 class="p-course__content-title">
+                        高校受験コース（週180分×4）
+                      </h3>
+                      <p class="p-course__content-text">
+                        志望校合格に向けて必要なことにターゲットを絞り、受験対策します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。
+                      </p>
+                    </li>
+                  </ul>
+                  <button class="p-course__content-button" data-dialog="modal2">
+                    詳しくみる
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="faq" class="p-faq"></section>
 
@@ -250,7 +686,6 @@
                     inputmode="tel"
                     pattern="[0-9\-]*"
                   />
-                  <!-- <p class="p-contact__error-message" id="emTel"></p> -->
                 </div>
               </div>
               <div class="p-contact__row-group">
@@ -289,10 +724,6 @@
 
                       <select name="occupation" id="inSelect">
                         <option disabled selected>選択してください</option>
-                        <!-- <option value="選択肢1">選択肢1</option>
-                      <option value="選択肢2">選択肢2</option>
-                      <option value="選択肢3">選択肢3</option>
-                      <option value="選択肢4">選択肢4</option> -->
                       </select>
                     </div>
                     <p class="p-contact__error-message" id="emSelect"></p>
@@ -435,12 +866,157 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="p-footer"></footer>
+      <footer class="p-footer"></footer>
+
+      <dialog
+        id="modal1"
+        aria-labelledby="modal-head1 modal-head1-2"
+        aria-describedby="modal-text1 modal-text1-2"
+        class="modal__content p-course-modal"
+      >
+        <p class="c-section__title-en p-course-modal__title-en">Course</p>
+        <button class="p-course-modal__close-button">&times;</button>
+        <div class="p-course-modal__inner">
+          <div class="p-course-modal__content">
+            <ul class="p-course-modal__list">
+              <li class="p-course-modal__item">
+                <div class="p-course-modal__head">
+                  <h3 id="modal-head1" class="p-course-modal__head-title">
+                    自由選択コース
+                  </h3>
+                  <p id="modal-text1" class="p-course-modal__head-text">
+                    1週間に60分、自分に必要な教科や内容を集中サポート！
+                  </p>
+                </div>
+                <div class="p-course-modal__body-wrap">
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">個別指導</h4>
+                    <p class="p-course-modal__body-text">
+                      60分×週1回<br />
+                      月額 9,800円(税込)
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">
+                      少人数グループ指導
+                    </h4>
+                    <p class="p-course-modal__body-text">
+                      60分×週1回<br />
+                      月額 7,500円(税込)
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="p-course-modal__item">
+                <div class="p-course-modal__head">
+                  <h3 id="modal-head1-2" class="p-course-modal__head-title">
+                    苦手徹底強化コース
+                  </h3>
+                  <p id="modal-text1-2" class="p-course-modal__head-text">
+                    週1回120分で、苦手な教科を完全攻略！
+                  </p>
+                </div>
+                <div class="p-course-modal__body-wrap">
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">個別指導</h4>
+                    <p class="p-course-modal__body-text">
+                      120分×週1回<br />
+                      月額 24,800円(税込)
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">
+                      少人数グループ指導
+                    </h4>
+                    <p class="p-course-modal__body-text">
+                      120分×週1回<br />
+                      月額 18,000円(税込)
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog
+        id="modal2"
+        aria-labelledby="modal-head2 modal-head2-2"
+        aria-describedby="modal-text2 modal-text2-2"
+        class="modal__content p-course-modal"
+      >
+        <p class="c-section__title-en p-course-modal__title-en">Course</p>
+        <button class="p-course-modal__close-button">&times;</button>
+        <div class="p-course-modal__inner">
+          <div class="p-course-modal__content">
+            <ul class="p-course-modal__list">
+              <li class="p-course-modal__item">
+                <div class="p-course-modal__head">
+                  <h3 id="modal-head2" class="p-course-modal__head-title">
+                    内申点アップコース
+                  </h3>
+                  <p id="modal-text2" class="p-course-modal__head-text">
+                    テスト2週間前からの徹底対策で、成績アップ！
+                  </p>
+                </div>
+                <div class="p-course-modal__body-wrap">
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">個別指導</h4>
+                    <p class="p-course-modal__body-text">
+                      120分×週3回<br />
+                      月額 38,000円(税込)
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">
+                      少人数グループ指導
+                    </h4>
+                    <p class="p-course-modal__body-text">
+                      120分×週3回<br />
+                      月額 28,000円(税込)
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="p-course-modal__item">
+                <div class="p-course-modal__head">
+                  <h3 id="modal-head2-2" class="p-course-modal__head-title">
+                    高校受験コース
+                  </h3>
+                  <p id="modal-text2-2" class="p-course-modal__head-text">
+                    受験本番を突破する実践力を鍛えます！
+                  </p>
+                </div>
+                <div class="p-course-modal__body-wrap">
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">個別指導</h4>
+                    <p class="p-course-modal__body-text">
+                      150分×週4回<br />
+                      月額 58,000円(税込)
+                    </p>
+                  </div>
+                  <div class="p-course-modal__body">
+                    <h4 class="p-course-modal__body-title">
+                      少人数グループ指導
+                    </h4>
+                    <p class="p-course-modal__body-text">
+                      150分×週4回<br />
+                      月額 42,000円(税込)
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </dialog>
+    </main>
 
     <script src="./assets/js/lib/swiper-bundle.min.js?v=1.4.2" defer></script>
     <script src="./assets/js/hamburger.js?v=1.5.0" defer></script>
     <script src="./assets/js/main.js?v=1.5.0" defer></script>
+    <script src="./assets/js/swiper.js?v=1.0.0" defer></script>
   </body>
 </html>
