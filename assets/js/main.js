@@ -100,6 +100,7 @@ let errorKind = document.querySelector("#emKind");
 let inPrivacy = document.querySelector("#inPrivacy");
 let errorPrivacy = document.querySelector("#emPrivacy");
 const form = document.querySelector("#contact-form");
+if (form) {
 const submitButton = form.querySelector("#submitBtn");
 
 submitButton.addEventListener("click", function (event) {
@@ -243,7 +244,7 @@ function onSubmit(token) {
     document.getElementById("contact-form").submit();
   }
 }
-
+}
 
 
 // ====================
