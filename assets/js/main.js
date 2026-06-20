@@ -104,7 +104,7 @@ mm.add("(min-width: 1000px)", () => {
 
 });
 
-mm.add("(max-width: 768px)", () => {
+mm.add("(max-width: 1000px)", () => {
 
 
   gsap.utils.toArray('.js-parallax2').forEach(wrap => {

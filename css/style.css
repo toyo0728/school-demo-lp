@@ -1091,8 +1091,14 @@ body.is-fixed {
 }
 @media (max-width: 1000px) {
   .p-cta2__bgwrap {
-    height: 410px;
-    padding-inline: 20px;
+    min-height: 410px;
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 374px) {
+  .p-cta2__bgwrap {
+    padding: 24px 16px;
   }
 }
 
@@ -1306,74 +1312,8 @@ body.is-fixed {
 }
 
 .p-cta2__contact-text {
-  font-size: 20px;
+  margin-inline: auto;
   font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  color: #274b66;
-  width: 100%;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  text-align: center;
-}
-@media (min-width: 1600px) {
-  .p-cta2__contact-text {
-    font-size: 25px;
-  }
-}
-@media (max-width: 1000px) {
-  .p-cta2__contact-text {
-    font-size: 18px;
-    letter-spacing: 0.9px;
-  }
-}
-
-.p-cta2-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 32px;
-  border: 2px solid #66b1c5;
-  background-color: #66b1c5;
-  color: #ffffff;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 160%;
-  letter-spacing: 0.48px;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  position: relative;
-  gap: 16px;
-}
-.p-cta2-button::before, .p-cta2-button::after {
-  content: "";
-  display: block;
-  flex-shrink: 0;
-}
-.p-cta2-button::before {
-  width: 18px;
-  height: 13px;
-  background: url("../img/contact/contact-icon.svg") no-repeat center/contain;
-}
-.p-cta2-button::after {
-  width: 18px;
-  height: 18px;
-  background: url("../img/contact/contact-arrow.svg") no-repeat center/contain;
-}
-@media (any-hover: hover) {
-  .p-cta2-button:hover {
-    border: 2px solid #66b1c5;
-    background-color: #ffffff;
-    color: #66b1c5;
-  }
-  .p-cta2-button:hover::before {
-    background: url("../img/contact/contact-icon-blue.svg") no-repeat center/contain;
-  }
-  .p-cta2-button:hover::after {
-    background: url("../img/contact/contact-arrow-blue.svg") no-repeat center/contain;
-  }
 }
 
 .p-cta2__button-text {
@@ -1381,11 +1321,12 @@ body.is-fixed {
   letter-spacing: 1px;
   cursor: pointer;
 }
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .p-cta2__button-text {
     gap: 8px;
     font-size: 18px;
     letter-spacing: 0.9px;
+    margin-inline: auto;
   }
 }
 @media (max-width: 374px) {
