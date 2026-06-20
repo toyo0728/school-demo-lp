@@ -28,20 +28,20 @@
         height: 86px;
         }
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         padding-block: 80px;
         padding-block-start: 104px;
     }
 }
 
 
-.p-faq__inner.--narrow {
+.l-faq__inner.--narrow {
     width:100%;
     max-width: 960px;
     margin-inline: auto;
     padding-inline: calc(40 / 1440 * 100vw);
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         padding-inline: 20px;
     }
 }
@@ -60,7 +60,7 @@
     position: relative;
     text-align: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         font-size: 26px;
         text-align: left;
     }
@@ -79,7 +79,7 @@
     text-align: center;
     color:  v.$main-color;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         left: 12%;
     }
 }
@@ -87,7 +87,7 @@
 .p-faq__title.--faq::before {
     content: 'FAQ';
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         left: 5%;
     }
 }
@@ -143,7 +143,7 @@ summary {
     border-radius: 10px;
     overflow: hidden;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         font-size: 16px;
         padding-inline: 0;
     }
@@ -166,7 +166,7 @@ summary {
     transform: rotate(0deg);
     border-radius: 10px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         font-size: 16px;
         padding-inline: 0;
     }
@@ -180,7 +180,7 @@ summary {
     border-radius: 10px;
     background-color: v.$white;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         padding-block: 16px;
         padding-inline: 8px;
     }
@@ -198,7 +198,7 @@ summary {
         transition: transform 0.3s ease;
         background: v.$main-color;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1000px) {
             width: 16px;
             height: 2px;
             right: 16px;
@@ -218,7 +218,7 @@ summary {
         background: v.$main-color;
         transition: transform 0.3s ease;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1000px) {
             width: 2px;
             height: 16px;
             right: 23px;
@@ -245,7 +245,7 @@ details[open] .p-faq__question::after {
     line-height: 1.8;
     letter-spacing: 0.05em;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         padding-inline: 58px 36px;
     }
 
@@ -269,7 +269,7 @@ details[open] .p-faq__question::after {
         background-color: v.$main-color;
         color: v.$white;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1000px) {
             translate: 0 0;
             top: 2px;
             left: 8px;
@@ -286,7 +286,7 @@ details[open] .p-faq__question::after {
     text-align: left;
     position: relative;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         font-size: 15px;
         padding-left: 32px;
         padding-right: 16px;
@@ -312,7 +312,7 @@ details[open] .p-faq__question::after {
         background-color: v.$accent-yellow;
         color: v.$white;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1000px) {
             top: -2px;
             translate: -50% 0%;
             left: 3px;
@@ -325,7 +325,7 @@ details[open] .p-faq__question::after {
     padding-left: 60px;
     background-color: v.$gray-bg;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         padding-left: 30px;
     }
 }
