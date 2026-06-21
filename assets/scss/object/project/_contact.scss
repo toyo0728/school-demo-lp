@@ -1,3 +1,315 @@
 @use "../../global" as v;
 
 // お問い合わせフォームセクション
+
+.p-contact {
+}
+
+.p-contact__inner {
+  padding-block: 120px;
+}
+
+.p-contact__container {
+  position: relative;
+  margin: 0 auto;
+
+  max-width: 880px;
+}
+
+.p-contact__head--top {
+  text-align: center;
+}
+
+.p-contact-title__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-contact-title__en {
+  color: v.$main-color;
+  font-family: v.$font-en;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+
+.p-contact-title__ja {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.75px;
+}
+
+.p-contact__form {
+  margin-block-start: 60px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.p-contact__row {
+  display: grid;
+  row-gap: 8px;
+  margin-block-start: 24px;
+
+  &:first-child {
+    margin-block-start: 60px;
+  }
+}
+
+.p-contact__row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+
+  .p-contact__row {
+    margin-block-start: 24px;
+  }
+}
+
+.p-contact__head {
+  font-weight: 500;
+  line-height: 1.8;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+
+  span.--must {
+    color: v.$accent-red;
+  }
+}
+
+.p-contact__name-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  column-gap: 40px;
+}
+
+// ===================================
+// 全体設定
+// ===================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 15px;
+  background: v.$gray-bg;
+  color: v.$text-main;
+
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+
+  font-size: 14px;
+
+  &::placeholder {
+    color: v.$text-form;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: v.$main-color;
+    // フォーカスしたときに枠線を表示
+    outline: none;
+    // 入力時のデフォルトの黒い枠線を消す
+  }
+
+  &.invalid {
+    border: 1px solid v.$accent-red;
+    background: #f4d9d9;
+    // 薄い赤背景
+  }
+}
+
+//テキストエリア
+textarea {
+  height: 240px;
+  resize: vertical; // ユーザーが縦方向にサイズを変更できるようにする
+}
+
+// ===================================
+// セレクトボックス
+// ===================================
+select {
+  //矢印を消す
+  -webkit-appearance: none;
+  appearance: none;
+  color: v.$text-form;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.p-contact__select-wrap {
+  position: relative;
+  svg {
+    position: absolute;
+    top: calc(50% + 2px);
+    translate: 0 -50%;
+    right: 24.59px;
+    width: 11.414px;
+    height: auto;
+    pointer-events: none;
+  }
+}
+
+// ===================================
+// チェックボックス
+// ===================================
+//デフォルトのものを消す
+input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+
+  &.invalid + span::before {
+    border-color: v.$accent-red;
+  }
+}
+//チェックボックスカスタマイズ ====================
+//チェックされた時の挙動
+input[type="checkbox"]:checked + span {
+  &::after {
+    opacity: 1;
+  }
+}
+
+input[type="checkbox"] + span {
+  cursor: pointer; // ← ここでチェックの有無に関係なくポインター
+}
+
+//カスタマイズ
+.p-contact__data-checkbox {
+  //全体のcss
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+
+  //各項目のcss
+  span {
+    display: inline-block;
+    font-size: 14px;
+    line-height: normal;
+    padding-left: 32px;
+    position: relative;
+
+    //frame
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid v.$text-form;
+      background: v.$gray-bg;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    //active
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 7px;
+      width: 6px;
+      height: 13px;
+      rotate: 45deg;
+      border-right: 2.5px solid v.$main-color;
+      border-bottom: 2.5px solid v.$main-color;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+.p-contact__acceptance {
+  display: flex;
+  align-items: center;
+  margin-block-start: 12px;
+  justify-content: start;
+  column-gap: 0;
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+  }
+
+  span {
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+}
+
+// ===================================
+// 送信ボタン
+// ===================================
+
+// 送信ボタンのカスタマイズ====================
+.p-contact__submit {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 29px;
+}
+
+.p-contact__btn-submit {
+  width: fit-content;
+  padding: 10px 18px;
+  column-gap: 6px;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background: v.$main-color;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: v.$gray-bg;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  line-height: 1.6;
+}
+
+.p-contact-btn__icon-arrow {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+// ===================================
+// エラーメッセージ
+// ===================================
+.p-contact__error-message {
+  color: v.$accent-red;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  margin-top: 2px;
+}
