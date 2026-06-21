@@ -100,6 +100,7 @@ let errorKind = document.querySelector("#emKind");
 let inPrivacy = document.querySelector("#inPrivacy");
 let errorPrivacy = document.querySelector("#emPrivacy");
 const form = document.querySelector("#contact-form");
+if (form) {
 const submitButton = form.querySelector("#submitBtn");
 
 submitButton.addEventListener("click", function (event) {
@@ -242,6 +243,7 @@ function onSubmit(token) {
   } else {
     document.getElementById("contact-form").submit();
   }
+}
 }
 
 
@@ -407,3 +409,74 @@ window.addEventListener("load", function () {
     });
   }
 });
+
+// ====================
+//  アコーディオン
+// ====================
+
+document.addEventListener('DOMContentLoaded', () => {
+  setUpAccordion();
+});
+
+const setUpAccordion = () => {
+  const details = document.querySelectorAll('.js-details');
+  const IS_OPENED_CLASS = 'is-opened';
+
+  details.forEach((element) => {
+    const summary = element.querySelector('.js-summary');
+    const content = element.querySelector('.js-content');
+
+    const toggleAccordion = (event) => {
+      event.preventDefault();
+
+      if (element.classList.contains(IS_OPENED_CLASS)) {
+        element.classList.toggle(IS_OPENED_CLASS);
+        closingAnim(content, element).restart();
+      } else {
+        element.classList.toggle(IS_OPENED_CLASS);
+        element.setAttribute('open', 'true');
+        openingAnim(content).restart();
+      }
+    };
+
+    summary.addEventListener('click', toggleAccordion);
+    content.addEventListener('click', toggleAccordion);
+  });
+}
+
+/**
+ * アコーディオンを閉じる時のアニメーション
+ */
+const closingAnim = (content, element) =>
+  gsap.to(content, {
+    height: 0,
+    opacity: 0,
+    duration: 0.4,
+    ease: 'power3.out',
+    overwrite: true,
+    onComplete: () => {
+      element.removeAttribute('open');
+    },
+  });
+
+/**
+ * アコーディオンを開く時のアニメーション
+ */
+const openingAnim = (content) =>
+  gsap.fromTo(
+    content,
+    {
+      height: 0,
+      opacity: 0,
+    },
+    {
+      height: content.scrollHeight,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power3.out',
+      overwrite: true,
+      onComplete: () => {
+        content.style.height = "auto";
+      }
+    }
+  );
