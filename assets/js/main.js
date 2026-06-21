@@ -100,6 +100,7 @@ let errorKind = document.querySelector("#emKind");
 let inPrivacy = document.querySelector("#inPrivacy");
 let errorPrivacy = document.querySelector("#emPrivacy");
 const form = document.querySelector("#contact-form");
+if (form) {
 const submitButton = form.querySelector("#submitBtn");
 
 submitButton.addEventListener("click", function (event) {
@@ -243,106 +244,136 @@ function onSubmit(token) {
     document.getElementById("contact-form").submit();
   }
 }
+}
 
-// コース案内タブ
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".p-course__tab").forEach(function (tab) {
-    tab.addEventListener("click", function (e) {
-      e.preventDefault();
-      // tabの切り替え
-      document.querySelectorAll(".p-course__tab").forEach(function (t) {
-        t.setAttribute("aria-selected", "false");
-      });
-      this.setAttribute("aria-selected", "true");
-      // tab panelの切り替え
-      document
-        .querySelectorAll(".p-course__content-wrap")
-        .forEach(function (panel) {
-          panel.classList.remove("js-show");
-        });
-      document
-        .getElementById(this.getAttribute("aria-controls"))
-        .classList.add("js-show");
-    });
-  });
+
+// ====================
+//  アコーディオン
+// ====================
+
+document.addEventListener('DOMContentLoaded', () => {
+  setUpAccordion();
 });
 
-// モーダルダイアログ
-document.addEventListener("DOMContentLoaded", function () {
-  const dialogs = document.querySelectorAll("dialog");
+const setUpAccordion = () => {
+  const details = document.querySelectorAll('.js-details');
+  const IS_OPENED_CLASS = 'is-opened';
 
-  function openDialog(dialog) {
-    const scrollY = window.scrollY;
-    dialog.showModal();
-    dialog.classList.add("js-show");
-    document.body.style.top = `-${scrollY}px`;
-  }
+  details.forEach((element) => {
+    const summary = element.querySelector('.js-summary');
+    const content = element.querySelector('.js-content');
 
-  function closeDialog(dialog) {
-    const scrollY = parseInt(document.body.style.top || "0") * -1;
-    dialog.classList.remove("js-show");
-    dialog.close();
-    document.body.style.top = "";
-    window.scrollTo(0, scrollY);
-  }
+    const toggleAccordion = (event) => {
+      event.preventDefault();
 
-  // ダイアログを開く
-  const open = document.querySelectorAll(".p-course__content-button");
-  open.forEach((button) => {
-    button.addEventListener("click", () => {
-      const dialogId = button.getAttribute("data-dialog");
-      const dialog = document.getElementById(dialogId);
-      openDialog(dialog);
-    });
-  });
-
-  // ダイアログを閉じる
-  const close = document.querySelectorAll(".p-course-modal__close-button");
-  close.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      e.stopPropagation();
-      closeDialog(button.closest("dialog"));
-    });
-  });
-
-  // オーバーレイクリックでダイアログを閉じる
-  dialogs.forEach((dialog) => {
-    dialog.addEventListener("click", (event) => {
-      if (event.target.closest(".p-course-modal__inner") === null) {
-        closeDialog(dialog);
+      if (element.classList.contains(IS_OPENED_CLASS)) {
+        element.classList.toggle(IS_OPENED_CLASS);
+        closingAnim(content, element).restart();
+      } else {
+        element.classList.toggle(IS_OPENED_CLASS);
+        element.setAttribute('open', 'true');
+        openingAnim(content).restart();
       }
-    });
+    };
+
+    summary.addEventListener('click', toggleAccordion);
+    content.addEventListener('click', toggleAccordion);
+});
+}
+/**
+ * アコーディオンを閉じる時のアニメーション
+ */
+const closingAnim = (content, element) =>
+  gsap.to(content, {
+    height: 0,
+    opacity: 0,
+    duration: 0.4,
+    ease: 'power3.out',
+    overwrite: true,
+    onComplete: () => {
+      // アニメーションの完了後にopen属性を取り除く
+      element.removeAttribute('open');
+    },
   });
+
+/**
+ * アコーディオンを開く時のアニメーション
+ */
+const openingAnim = (content) =>
+  gsap.fromTo(
+    content,
+    {
+      height: 0,
+      opacity: 0,
+    },
+    {
+      height: content.scrollHeight,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power3.out',
+      overwrite: true,
+      onComplete: () => {
+        content.style.height = "auto";
+      }
+    }
+  );
+
+// ====================
+//  パララックス
+// ====================
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+
+  gsap.utils.toArray('.js-parallax1').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -300,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+  gsap.utils.toArray('.js-parallax2').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -300,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+
 });
 
-// 時間差アニメーション
-window.addEventListener("load", function () {
-  gsap.registerPlugin(ScrollTrigger);
+mm.add("(max-width: 768px)", () => {
 
-  const timeDelay = 350; // 時間差のタイミング(ミリ秒)
-  const maxItemNumber = 4; // 時間差で発火させる最大要素数
+  gsap.utils.toArray('.js-parallax1').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -150,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
+  gsap.utils.toArray('.js-parallax2').forEach(wrap => {
+    gsap.to(wrap, {
+      y: -150,
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5
+      }
+    })
+  });
 
-  // fade in
-  for (let i = 0; i < maxItemNumber; i++) {
-    const fadeInItems = document.querySelectorAll(
-      `.animated__fadeIn.--delay${i}`,
-    );
-    fadeInFunction(fadeInItems, i * timeDelay);
-  }
-
-  function fadeInFunction(fadeInItems, timeout) {
-    fadeInItems.forEach((item) => {
-      ScrollTrigger.create({
-        trigger: item,
-        start: "top 70%", // 要素が上部から70%の位置で発火
-        markers: false,
-        onEnter: () => {
-          // 要素内に入ったら、js-showクラスをつける
-          setTimeout(() => {
-            item.classList.add("js-show");
-          }, timeout);
-        },
-      });
-    });
-  }
 });
