@@ -2085,6 +2085,144 @@ input[type=checkbox] + span {
   margin-top: 2px;
 }
 
+.p-cta1 {
+  position: relative;
+  overflow: hidden;
+  min-height: 508px;
+}
+@media (max-width: 1000px) {
+  .p-cta1 {
+    min-height: 494px;
+  }
+}
+
+.p-cta1__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  height: 100%;
+}
+.p-cta1__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.p-cta1__bg picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.p-cta1__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-cta1__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 120px;
+}
+@media (max-width: 768px) {
+  .p-cta1__box {
+    padding-block: 80px;
+  }
+}
+
+.p-cta__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 730px;
+  padding-inline: 30px;
+  text-align: center;
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .p-cta__inner {
+    width: 100%;
+    padding-inline: 20px;
+  }
+}
+
+.p-cta1__title {
+  position: relative;
+  z-index: 1;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+@media (max-width: 1000px) {
+  .p-cta1__title {
+    font-size: 26px;
+    text-align: center;
+  }
+}
+
+.p-cta-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .p-cta-br {
+    display: block;
+  }
+}
+
+.p-cta1__text {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  max-width: 640px;
+  height: auto;
+  margin-top: 24px;
+  padding-inline: 31px;
+  text-align: left;
+}
+@media (max-width: 1000px) {
+  .p-cta1__text {
+    font-size: 15px;
+    margin-top: 20px;
+    padding-inline: 0;
+  }
+}
+
+.js-parallax1 {
+  width: 100%;
+  height: 100%;
+}
+.js-parallax1 img {
+  width: 100%;
+  height: calc(100% + 300px);
+  object-fit: cover;
+}
+@media (max-width: 756px) {
+  .js-parallax1 img {
+    height: calc(100% + 150px);
+  }
+}
+
+.parallax1 picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.p-cta1__contact {
+  margin-block-start: 32px;
+  margin-inline: auto;
+}
+
 .p-footer {
   background: #ecf6f9;
 }
