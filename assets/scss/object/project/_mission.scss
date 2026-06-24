@@ -1,0 +1,77 @@
+@use "../../global" as v;
+
+.p-mission {
+  background: v.$gray-bg;
+}
+
+.p-mission__wrap {
+
+}
+
+.p-mission__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.p-mission__title {
+
+}
+
+.p-mission__title-en {
+
+}
+
+.p-mission__title-ja {
+
+}
+
+.p-mission__desc {
+
+}
+
+.p-mission__cards {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 60px;
+}
+
+.p-mission__card {
+  width: min(100%, 288px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    border-right: 1px dashed #B4ADAD;
+  }
+}
+
+.p-mission__card-image {
+  width: 100%;
+  height: auto;
+  padding-inline: 14px;
+
+  img {
+    aspect-ratio: 260 / 148;
+  }
+}
+
+.p-mission__card-content {
+  padding-inline: 22px;
+}
+
+.p-mission__card-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1.1px;
+}
+
+.p-mission__card-text {
+  letter-spacing: 0.8px;
+}
+
