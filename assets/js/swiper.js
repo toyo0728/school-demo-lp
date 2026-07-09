@@ -8,7 +8,8 @@ if (teacherSwiperEl && typeof Swiper !== "undefined") {
 
         speed: 600,
         slidesPerView: "auto",
-        spaceBetween: 40,
+        spaceBetween: 0,
+        // spaceBetween: 24,
         grabCursor: true,
 
         navigation: {
@@ -20,5 +21,11 @@ if (teacherSwiperEl && typeof Swiper !== "undefined") {
             el: ".p-teacher-swiper-pagination",
             type: "progressbar",
         },
+
+        // breakpoints: {
+        //     768: {
+        //         spaceBetween: 40,
+        //     },
+        // },
     });
 }

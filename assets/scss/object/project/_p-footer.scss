@@ -1,130 +1,152 @@
 @use "../../global" as v;
 
 .p-footer {
-  background: v.$light-blue;
+    background: v.$light-blue;
 }
 
 .p-footer__inner {
-  padding-block: 60px;
-  padding-inline: 20px;
-  margin: 0 auto;
+    padding-block: 60px;
+    padding-inline: 20px;
+    margin: 0 auto;
 }
 
 .p-footer__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  align-items: start;
-  max-width: 1040px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: start;
+    max-width: 1040px;
 }
 
 .p-footer__top {
-  display: flex;
-  row-gap: 40px;
-  align-self: stretch;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    row-gap: 40px;
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include v.mq(sp) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
 }
 
 .p-footer__logo {
-  width: 225px;
-  height: 36px;
+    width: 225px;
+    height: 36px;
 }
 
 .p-footer-tel {
-  a {
-    gap: 8px;
-  }
+    a {
+        gap: 8px;
+    }
 }
 
 .p-footer-tel__number {
-  img {
-    width: 31px;
-    height: 41px;
-  }
+    img {
+        width: 31px;
+        height: 41px;
+    }
 }
 
 .p-footer-tel__text {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.6px;
-  padding-inline-start: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+    padding-inline-start: 20px;
 }
 
 .p-footer__body {
-  margin-block-start: 20px;
+    margin-block-start: 20px;
+
+    @include v.mq(sp) {
+        margin-inline: auto;
+    }
 }
 
 .p-footer__list {
-  display: flex;
-  flex-direction: row;
-  column-gap: 24px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
 
-  font-size: 14px;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.56px;
-  text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: center;
 
-  li a {
-    position: relative;
+    li a {
+        position: relative;
 
-    &:hover {
-      transition: 0.3s;
+        &:hover {
+            transition: 0.3s;
 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 100%; // テキスト幅に追従
-        height: 1px;
-        left: 50%;
-        bottom: -7px;
-        background: v.$text-main;
-        transform: translateX(-50%); // ← 中央に配置するポイント
-      }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%; // テキスト幅に追従
+                height: 1px;
+                left: 50%;
+                bottom: -7px;
+                background: v.$text-main;
+                transform: translateX(-50%); // ← 中央に配置するポイント
+            }
+        }
     }
-  }
+
+    @include v.mq(sp) {
+        flex-direction: column;
+        row-gap: 20px;
+    }
 }
 
 .p-footer__bottom {
-  margin-block-start: 32px;
-  padding-top: 30px;
-  align-self: stretch;
-  border-top: 2px solid v.$text-main;
+    margin-block-start: 32px;
+    padding-top: 30px;
+    align-self: stretch;
+    border-top: 2px solid v.$text-main;
 
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  row-gap: 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    row-gap: 16px;
+
+    @include v.mq(sp) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
 }
 
 .p-footer__sns {
-  display: flex;
-  flex-direction: row;
-  column-gap: 16px;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 .p-footer__sns-link {
-  transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 
-  &:hover {
-    opacity: 0.7;
-  }
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .p-footer__sns-icon {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .p-footer__copy {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.6px;
-  text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+    text-align: center;
 }

@@ -10,6 +10,10 @@
     @media (max-width: 1000px) {
       @content;
     }
+  } @else if $breakpoint == 1100 {
+    @media (max-width: 1100px) {
+      @content;
+    }
   } @else if $breakpoint == pc {
     @media (min-width: 768px) {
       @content;

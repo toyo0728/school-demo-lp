@@ -12,12 +12,27 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: 1100px) {
+        max-width: 700px;
+        margin-inline: auto;
+        flex-direction: column;
+        row-gap: 32px;
+    }
 }
 
 .p-reason__title--wrap {
     flex-direction: row;
     position: sticky;
     top: 95px;
+    padding-inline-end: 56px;
+
+    @media (max-width: 1100px) {
+        position: unset;
+        padding-inline-end: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .p-reason__title {
@@ -25,13 +40,34 @@
     flex-shrink: 0;
 }
 
+.p-reason__title-img {
+    @include v.mq(sp) {
+        aspect-ratio: 56 / 113;
+        width: 56px;
+        margin-inline-end: 15px;
+        margin-block-start: -40px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
 .p-reason__list {
     display: flex;
     flex-direction: column;
+
     gap: 40px;
     list-style: none;
     flex: 1;
     max-width: 766px;
+
+    @include v.mq(sp) {
+        max-width: 100%;
+        flex-direction: column;
+    }
 }
 
 .p-reason__item {
@@ -43,6 +79,12 @@
     border-radius: 20px;
     padding: 25px 32px;
     min-height: 280px;
+
+    @include v.mq(sp) {
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 16px;
+    }
 }
 
 .p-reason__badge {
@@ -60,6 +102,12 @@
     color: v.$white;
     font-family: v.$font-en;
     font-weight: 700;
+
+    @include v.mq(sp) {
+        left: unset;
+        top: -20px;
+        right: 14px;
+    }
 }
 
 .p-reason__badge-label {
@@ -86,6 +134,10 @@
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 1.1px;
+
+    @include v.mq(sp) {
+        font-size: clamp(18px, calc(18 / 375 * 100vw), 22px);
+    }
 }
 
 .p-reason__body {
@@ -93,6 +145,10 @@
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.8px;
+
+    @include v.mq(sp) {
+        font-size: clamp(15px, calc(15 / 375 * 100vw), 16px);
+    }
 }
 
 .p-reason__img-wrap {
@@ -101,6 +157,13 @@
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
+
+    @include v.mq(sp) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 303 / 200;
+        border-radius: 5px;
+    }
 
     img {
         width: 100%;

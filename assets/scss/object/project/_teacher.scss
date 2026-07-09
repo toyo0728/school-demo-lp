@@ -9,6 +9,12 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @include v.mq(sp) {
+        max-width: 600px;
+        margin-inline: auto;
+        gap: 40px;
+    }
 }
 
 // =============================
@@ -28,20 +34,35 @@
 }
 
 .p-teacher-swiper-slide {
-    width: 352px;
+    // カード幅 + gap を1スライド分の幅にする（spaceBetween: 0 前提）
+    width: calc(352px + 40px);
+    box-sizing: border-box;
+    padding-inline-end: 40px;
     display: flex;
     flex-direction: column;
     gap: 14px;
+
+    @include v.mq(sp) {
+        gap: 16px;
+        width: calc((320 + 24) / 375 * 100vw);
+        padding-inline-end: calc(24 / 375 * 100vw);
+    }
 }
 
 // =============================
 // カード内要素
 // =============================
 .p-teacher__img-wrap {
-    height: 260px;
+    // aspect-ratio: 352 / 260;
+    // height: auto;
     border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
+
+    @include v.mq(sp) {
+        aspect-ratio: 320 / 240;
+        width: 100%;
+    }
 
     img {
         width: 100%;
@@ -72,7 +93,7 @@
     align-items: center;
     justify-content: center;
     width: 46px;
-    padding-block: 3px;
+    padding-block: 4px;
     background-color: v.$main-color;
     color: v.$white;
     font-size: 14px;
@@ -88,13 +109,17 @@
     line-height: 1.5;
     letter-spacing: 1.1px;
     color: v.$text-main;
+
+    @include v.mq(sp) {
+        font-size: clamp(18px, calc(18 / 375 * 100vw), 22px);
+    }
 }
 
 .p-teacher__body {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.6;
-    letter-spacing: 0.9px;
+    letter-spacing: 1px;
     color: v.$text-main;
 }
 
@@ -106,12 +131,21 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 74px;
+
+    @include v.mq(sp) {
+        margin-top: 67px;
+    }
 }
 
 .p-teacher__nav {
     display: flex;
     align-items: center;
     gap: 22px;
+
+    @include v.mq(sp) {
+        gap: 21px;
+        padding-inline-end: 4px;
+    }
 }
 
 // =============================
@@ -140,22 +174,19 @@
     // 各ボタンのカスタマイズ
     .swiper-button-prev,
     .swiper-button-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         width: 39px;
         height: 39px;
         border-radius: 50%;
-        background-color: v.$main-color;
+        background-color: #274b66;
         cursor: pointer;
         transition: opacity 0.2s ease;
 
+        &::before,
         &::after {
-            display: block;
-            width: 9px;
-            height: 9px;
-            border-right: 2px solid v.$white;
-            border-top: 2px solid v.$white;
+            content: "";
+            position: absolute;
+            top: 50%;
         }
 
         &.swiper-button-disabled {
@@ -164,12 +195,42 @@
         }
     }
 
-    .swiper-button-prev::after {
-        transform: rotate(-135deg) translate(1px, -1px);
+    .swiper-button-next {
+        &::before {
+            left: 12px;
+            width: 13px;
+            height: 2px;
+            background-color: v.$white;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            left: 18px;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid v.$white;
+            border-right: 2px solid v.$white;
+            transform: translateY(-50%) rotate(45deg);
+        }
     }
 
-    .swiper-button-next::after {
-        transform: rotate(45deg) translate(-1px, 1px);
+    .swiper-button-prev {
+        &::before {
+            right: 12px;
+            width: 13px;
+            height: 2px;
+            background-color: v.$white;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            right: 17px;
+            width: 8px;
+            height: 8px;
+            border-bottom: 2px solid v.$white;
+            border-left: 2px solid v.$white;
+            transform: translateY(-50%) rotate(45deg);
+        }
     }
 
     // =============================
@@ -186,6 +247,10 @@
         background-color: rgba(180, 173, 173, 0.5);
         border-radius: 10px;
         overflow: hidden;
+
+        @include v.mq(sp) {
+            width: 150px;
+        }
     }
 
     // active な部分
